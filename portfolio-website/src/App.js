@@ -18,13 +18,19 @@ function App() {
   return (
     <div className="App">
       <header className="Header">
-            <button onClick={() => {changeLanguage(dataEn)}}>EN</button>
-            <button onClick={() => {changeLanguage(dataUkr)}}>UKR</button>
-            <a href={currentData.header.linkedInHref}>{currentData.header.linkedIn}</a>
-            <a href={`tel:${currentData.header.phoneNumber}`}><span className="material-symbols-outlined">call</span></a>
+        <div className="Header-Main-Container">
+          <div className="Header-Buttons-Container">
+              <button className="Header-Button" onClick={() => {changeLanguage(dataEn)}}>EN</button>
+              <button className="Header-Button" onClick={() => {changeLanguage(dataUkr)}}>UKR</button>
+          </div>
+            <div className="Header-Links-Container">
+              <a className="Header-Link" href={`mailto:${currentData.header.email}`}><span className="material-symbols-outlined">mail</span></a>
+              <a className="Header-Link" href={currentData.header.linkedInHref}>{currentData.header.linkedIn}</a>
+            </div>
+        </div>
             {/* <a href="#">{currentData.header.navItems[1]}</a> */}
-            <span className="material-symbols-outlined">menu</span>
-            {/* <Nav/> */}
+            <span className="material-symbols-outlined Header-Menu-Button">menu</span>
+            {/* <Nav currentData={currentData}/> */}
         </header>
      {/* <Header changeLanguage={changeLanguage} currentData={currentData}/>  */}
       <section className="Main-Section">
