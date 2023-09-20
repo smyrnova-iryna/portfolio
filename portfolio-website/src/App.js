@@ -29,14 +29,21 @@ function App() {
 
     let ctx = gsap.context(() => {
       
-      gsap.from(".Header-Animated-Element", 
+      let tl = gsap.timeline()
+
+      tl.from(".Header", 
+      { 
+        duration: 2,
+        x: -5000
+      }); 
+
+      tl.from(".Header-Animated-Element", 
       { 
         duration: 1,
         y: -50,
         ease: "bounce.out",
         stagger: 0.5
-      }
-      ); 
+      }); 
     }, comp); 
     
     return () => ctx.revert(); 
