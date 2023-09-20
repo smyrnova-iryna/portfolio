@@ -84,7 +84,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5px
+  gap: 5px;
 }
 
 .Header-Link {
@@ -92,6 +92,7 @@
   align-items: center;
   text-decoration: none;
   color: var(--first-details-color);
+  overflow: hidden;
 }
 
 .Header-Button {
@@ -101,10 +102,21 @@
   background-color: var(--main-page-color);
   color: var(--first-details-color);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .Header-Menu-Button {
   color: var(--second-dark-color);
+  height: 20px;
+  cursor: pointer;
+}
+
+.Header-Menu-Button:hover , .Header-Button:hover , .Header-Link:hover {
+  color: var(--second-details-color);
+}
+
+.Header-Button:hover {
+  background-color: var(--first-details-color);
 }
 
 /* Header styles///////////////////////////////////////////////////////////////////////////////////////////////////// */
