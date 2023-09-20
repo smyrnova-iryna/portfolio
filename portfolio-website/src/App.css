@@ -70,6 +70,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  z-index: 90;
 }
 
 .Header-Main-Container {
@@ -78,6 +79,14 @@
   align-items: center;
   justify-content: space-between;
   min-width: 180px;
+}
+
+.Header-Right-Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-end;
 }
 
 .Header-Buttons-Container , .Header-Links-Container {
@@ -105,21 +114,112 @@
   cursor: pointer;
 }
 
-.Header-Menu-Button {
+.Header-Menu-Button , .Header-Menu-Hide-Button {
   color: var(--second-dark-color);
   height: 20px;
   cursor: pointer;
 }
 
-.Header-Menu-Button:hover , .Header-Button:hover , .Header-Link:hover {
+.Header-Menu-Button:hover , .Header-Link:hover , .Header-Menu-Hide-Button:hover {
   color: var(--second-details-color);
 }
 
-.Header-Button:hover {
+.Header-Button:active, .Header-Button:hover {
   background-color: var(--first-details-color);
+  color: var(--second-details-color);
 }
 
 /* Header styles///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Nav styles//////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.Nav {
+  padding: 40px;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--main-dark-color);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 80;
+  display: none;
+  /* margin-left: 100%; */
+}
+
+.Visible-Nav {
+  display: block;
+}
+
+.Nav-Link {
+  height: 60px;
+  width: 100%;
+  /* background-color: pink; */
+  border-bottom: 0.3px solid var(--second-details-color);
+  text-decoration: none;
+  font-size: 100%;
+  color: var(--main-page-color);
+  display: flex;
+  align-items: center;
+  padding: 20px 0 0 5px
+}
+
+.Nav-Link:hover, .Nav-Desctop-Link:hover {
+  background-color: var(--second-details-color);
+}
+
+.Desctop-Nav {
+  display: none;
+}
+
+
+@media screen and (min-width: 950px){
+  .Header {
+    font-size: 150%;
+    height: 60px;
+  }
+  .Header-Buttons-Container {
+    height: 30px;
+  }
+  .Header-Email-Icon {
+    font-size: 150%!important;
+  }
+  .Header-Menu-Button {
+    visibility: hidden;
+  }
+  .Header-Main-Container {
+    width: 250px;
+  }
+  .Header-Links-Container {
+    width: 140px;
+    justify-content: space-between;
+  }
+  .Header-Right-Container {
+    justify-content: flex-end;
+  }
+  .Desctop-Nav {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    align-items: center;
+    justify-content: space-between;
+    width: 550px;
+  }
+  .Nav-Desctop-Link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 100%;
+    color: var(--main-page-color);
+  }
+  /* .Header, .Header-Main-Container {
+    height: 80px;
+  }
+  .Header-Buttons-Container , .Header-Links-Container {
+    height: 30px;
+  } */
+}
+
+/* Nav styles//////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .Main-Section {
   width: 100%;
