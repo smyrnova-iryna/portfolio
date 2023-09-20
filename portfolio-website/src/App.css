@@ -54,6 +54,7 @@
   --main-page-color: #F8F8FF;
   --first-details-color: purple;
   --second-details-color: violet;
+  --third-details-color: #CDB5CD
 } 
 
 /* Header styles///////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -221,19 +222,72 @@
 
 /* Nav styles//////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* Main section styles/////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .Main-Section {
   width: 100%;
   background-color: var(--main-page-color);
 }
 
+/* Main section styles/////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* About section styles/////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .About {
-  height: 100vh;
   padding-top: 40px;
-  /* background-color: pink; */
+  
+  /* flex-direction: column; */
 }
+
+.About-Top-Container {
+  display: flex;
+  min-height: 50vh;
+}
+
+.About-Sidebar {
+  /* background-color: var(--second-dark-color); */
+  width: 320px;
+  /* height: 300px; */
+  /* height: 40%; */
+  margin: 5% 0 5% 5%;
+  padding: 5%;
+  border: 2px solid var(--first-details-color);
+  display: flex;
+  flex-direction: column;
+  gap: 9px
+}
+
+.About-Main-Page {
+  background-color: var(--third-details-color);
+  /* height: 315px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 5px;
+}
+
+.About-Name {
+  font-size: 15px;
+}
+
+.About-Position {
+  font-size: 13px;
+  overflow-wrap: wrap;
+}
+
+
+.About-Sidebar-Text {
+  font-size: 60%;
+  font-weight: 200%;
+  text-decoration: none;
+  color: var(--second-dark-color)
+}
+
+/* About section styles/////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .Footer {
   width: 100%;
-  background-color: var(--main-dark-color);;
+  background-color: var(--main-dark-color);
   height: 200px;
 }

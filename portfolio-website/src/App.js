@@ -61,6 +61,12 @@ function App() {
         ease: "bounce.out",
         stagger: 0.5
       }); 
+      
+      gsap.from(".About-Sidebar", 
+      { 
+        duration: 1,
+        x: -500,
+      });
 
     }, comp); 
     
@@ -133,8 +139,19 @@ function App() {
         </nav>
       <section className="Main-Section">
         <article className="About">
-
-
+          <div className="About-Top-Container">
+              <div className="About-Sidebar">
+                <img src={require('./data/img/app-photo.jpg')} alt="Foto"></img>
+                <a className='About-Sidebar-Text' href={currentData.mainSection.about.phoneNumber}>{currentData.mainSection.about.phoneNumberTitle}</a>
+                <a className='About-Sidebar-Text' href={`mailto:${currentData.header.email}`}>{currentData.header.email}</a>
+                <p className='About-Sidebar-Text'>{currentData.mainSection.about.location}</p>
+              </div>
+              <div className="About-Main-Page">
+                <h2 className='About-Name'>{currentData.mainSection.about.name}</h2>
+                <h1 className='About-Position'>{currentData.mainSection.about.position}</h1>
+              </div>
+          </div>
+              
         </article>
       </section>
       <footer className="Footer">
