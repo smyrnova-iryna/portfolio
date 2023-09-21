@@ -385,14 +385,28 @@
   color: var(--first-details-color)
 }
 
+.Project-Link-Extra-Container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
 .Project-Link {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* gap: 5px; */
   align-items: center;
+  justify-content: space-evenly;
   padding: 10px;
   text-decoration: none;
   border: 3px solid var(--third-details-color);
+  height: 180px;
 }
 
 .Project-Link-Title {
@@ -417,6 +431,34 @@
 @media screen and (min-width: 950px){
   .Portfolio-anchor {
     top: -60px
+  }
+}
+
+@media screen and (min-width: 320px){ 
+  .Project-Link {
+    height: 220px;
+  }
+
+  .Project-Link-Extra-Container {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 380px){ 
+  .Project-Link {
+    height: 250px;
+  }
+  .Project-Link-Extra-Container {
+    height: 280px;
+  }
+}
+
+@media screen and (min-width: 715px){ 
+  .Project-Link {
+    height: 350px;
+  }
+  .Project-Link-Extra-Container {
+    height: 400px;
   }
 }
 

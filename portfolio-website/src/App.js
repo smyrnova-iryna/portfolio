@@ -23,6 +23,10 @@ function App() {
 
   const [animateBurgerMenu, setAnimateBurgerMenu] = useState(false);
 
+  const [animateWebsiteLinkTo, setAnimateWebsiteLinkTo] = useState(false);
+
+  const [animateWebsiteLinkFrom, setAnimateWebsiteLinkFrom] = useState(false);
+
   const [navVisibility, setNavVisibility] = useState("");
 
   const [closeIconDisplay, setcloseIconDisplay] = useState("none")
@@ -110,6 +114,38 @@ function App() {
   }, [animateBurgerMenu])
 
  
+  useLayoutEffect(() => {
+    if (animateWebsiteLinkTo === true) {
+      let ctxTo = gsap.context(() => {
+
+        gsap.to(".Project-Link", 
+        { 
+          duration: 1,
+          scale: 1.1
+        }); 
+
+      }, comp); 
+
+      return () => ctxTo.revert(); 
+
+    } else if (animateWebsiteLinkFrom === true) {
+      let ctxFrom = gsap.context(() => {
+
+        gsap.from(".Project-Link", 
+        { 
+          duration: 1,
+          scale: 1.1
+        }); 
+
+      }, comp); 
+
+      return () => ctxFrom.revert(); 
+
+    }
+    
+  }, [animateWebsiteLinkTo, animateWebsiteLinkFrom])
+
+
   return (
     <div className="App" ref={comp}>
       <header className="Header">
@@ -162,10 +198,12 @@ function App() {
             <h3 className="Standart-Subheading">{currentData.mainSection.portfolio.projects[0].title}</h3>
             <div className="Projects-Container">
               <p className="Project-Description">{currentData.mainSection.portfolio.projects[0].description}</p>
-              <a className="Project-Link" href={currentData.mainSection.portfolio.projects[0].link}>
-                <p className="Project-Link-Title">{currentData.mainSection.portfolio.projects[0].linkTitle} <ArrowForwardIcon className='Standart-Icon' /></p>
-                <img src={require("./data/img/ferrometals-preview-image.png")} target="blank" alt="FerroMetals website preview"></img>
-              </a>
+              <div className="Project-Link-Extra-Container">
+                <a className="Project-Link" onMouseEnter={() => {setAnimateWebsiteLinkTo(true); setAnimateWebsiteLinkFrom(false)}} onMouseLeave={() => {setAnimateWebsiteLinkFrom(true); setAnimateWebsiteLinkTo(false)}} href={currentData.mainSection.portfolio.projects[0].link}>
+                  <p className="Project-Link-Title">{currentData.mainSection.portfolio.projects[0].linkTitle} <ArrowForwardIcon className='Standart-Icon' /></p>
+                  <img src={require("./data/img/ferrometals-preview-image.png")} target="blank" alt="FerroMetals website preview"></img>
+                </a>
+              </div>
             </div>
           </div>
           <div className="Pet-Projects">
