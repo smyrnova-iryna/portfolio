@@ -56,6 +56,56 @@ const dataEn = {
                     }
                 ]
             }
+        },
+        experience: {
+            heading: "Experience",
+            job: {
+                title: "React Developer in UAB «FerroMetals»",
+                description: `I  am responsible for developing and designing of the company's 
+                corporate website (in the activity "Woodworking machines production 
+                and sale")`,
+                date: "02.2023 - up to now"
+            },
+            volunteering: {
+                title: "Volunteering",
+                subTitle: "HTML/CSS mentor in CodeClub",
+                description: `As a volunteer mentor in the charitable organization "The Charitable Foundation "Покоління.ЮЕЙ"" was responsible for teaching HTML/CSS course for students in the age group of 12-15 years, including the preparation and presentation of lectures, preparation and checking of homeworks.`,
+                date: "04.2023 - 06.2023"
+            },
+            courses: {
+                title: "Courses",
+                coursesList: [
+                    {
+                        title: "React Online Marathon in Softserve IT Academy",
+                        date: "10.2022 - 12.2022"
+                    },
+                    {
+                        title: "HTML5/CSS3/JavaScript Fundamentals course in Softserve IT Academy",
+                        date: "09.2022 - 10.2022"
+                    },
+                    {
+                        title: "Python Pro in Hillel IT School",
+                        date: "02.2022 - 06.2022"
+                    },
+                    {
+                        title: "Python Introduction in Hillel IT School ",
+                        date: "10.2021 - 01.2022"
+                    }
+                ]
+            },
+            languages: {
+                title: "Languages",
+                languagesList: [
+                    {
+                        title: "Ukrainian",
+                        level: "Native"
+                    },
+                    {
+                        title: "English",
+                        level: "B2"
+                    }
+                ]
+            }
         }
     },
     footer: {}

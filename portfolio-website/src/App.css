@@ -321,7 +321,7 @@
 
 /* Portfolio styles/////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.Portfolio {
+.Portfolio, .Experience {
   /* background-color: pink; */
   display: flex;
   flex-direction: column;
@@ -334,7 +334,7 @@
   position: relative;
 }
 
-.Portfolio-anchor {
+.Portfolio-anchor, .Experience-anchor {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -344,10 +344,11 @@
 
 /* #Portfolio:target { scroll-margin-top: 60px; } */
 
-.Projects {
+.Projects, .Experience-Block {
   display: flex;
   flex-direction: column;
-  gap: 10px
+  gap: 10px;
+  color: var(--second-dark-color);
 }
 
 .Standart-Heading {
@@ -360,7 +361,12 @@
   color: var(--first-details-color);
 }
 
-.Project-Description {
+.Standart-Micro-Heading {
+  background: linear-gradient(to top, var(--third-details-color) 40%, var(--main-page-color) 40%);
+  width: max-content;
+}
+
+.Standart-Description {
   text-align: justify;
 }
 
@@ -383,6 +389,10 @@
 
 .Pet-Project-Link {
   color: var(--first-details-color)
+}
+
+.Pet-Project-Link:hover {
+  color: var(--second-details-color)
 }
 
 .Project-Link-Extra-Container {
@@ -499,6 +509,14 @@
 
 
 /* Portfolio styles/////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Experience styles////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.Experience {
+  font-size: 60%;
+}
+
+/* Experience styles////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .Footer {
   width: 100%;

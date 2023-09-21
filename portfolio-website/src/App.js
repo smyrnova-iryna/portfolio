@@ -197,7 +197,7 @@ function App() {
           <div className="Projects">
             <h3 className="Standart-Subheading">{currentData.mainSection.portfolio.projects[0].title}</h3>
             <div className="Projects-Container">
-              <p className="Project-Description">{currentData.mainSection.portfolio.projects[0].description}</p>
+              <p className="Standart-Description">{currentData.mainSection.portfolio.projects[0].description}</p>
               <div className="Project-Link-Extra-Container">
                 <a className="Project-Link" onMouseEnter={() => {setAnimateWebsiteLinkTo(true); setAnimateWebsiteLinkFrom(false)}} onMouseLeave={() => {setAnimateWebsiteLinkFrom(true); setAnimateWebsiteLinkTo(false)}} href={currentData.mainSection.portfolio.projects[0].link}>
                   <p className="Project-Link-Title">{currentData.mainSection.portfolio.projects[0].linkTitle} <ArrowForwardIcon className='Standart-Icon' /></p>
@@ -216,6 +216,26 @@ function App() {
                       </li> 
                       )}
           </ul>
+          </div>
+        </article>
+        <article className="Experience">
+          <div className="Experience-anchor" id="Experience"></div>
+          <h2 className="Standart-Heading">{currentData.mainSection.experience.heading}</h2>
+          <div className='Experience-Block'>
+            <h3 className="Standart-Subheading">{currentData.mainSection.experience.job.title}</h3>
+            <p className="Standart-Description">{currentData.mainSection.experience.job.description}</p>
+            <p>[ {currentData.mainSection.experience.job.date} ]</p>
+          </div>
+          <div className='Experience-Block'>
+            <h3 className="Standart-Subheading">{currentData.mainSection.experience.volunteering.title}</h3>
+            <h4 className="Standart-Micro-Heading">{currentData.mainSection.experience.volunteering.subTitle}</h4>
+            <p className="Standart-Description">{currentData.mainSection.experience.volunteering.description}</p>
+            <p>[ {currentData.mainSection.experience.volunteering.date} ]</p>
+          </div>
+          <div className='Experience-Block'>
+            <div className='Experience-Courses-Block'>
+              
+            </div>
           </div>
         </article>
       </section>
