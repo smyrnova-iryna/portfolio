@@ -10,6 +10,7 @@ import dataUkr from './data/dataUkr';
 import MenuIcon from '@mui/icons-material/Menu';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import { gsap } from "gsap";
 
@@ -67,6 +68,7 @@ function App() {
         duration: 1,
         x: -500,
       });
+
 
     }, comp); 
     
@@ -161,13 +163,21 @@ function App() {
             <div className="Projects-Container">
               <p className="Project-Description">{currentData.mainSection.portfolio.projects[0].description}</p>
               <a className="Project-Link" href={currentData.mainSection.portfolio.projects[0].link}>
-                <p>{currentData.mainSection.portfolio.projects[0].link}</p>
+                <p className="Project-Link-Title">{currentData.mainSection.portfolio.projects[0].linkTitle} <ArrowForwardIcon className='Standart-Icon' /></p>
                 <img src={require("./data/img/ferrometals-preview-image.png")} target="blank" alt="FerroMetals website preview"></img>
               </a>
             </div>
           </div>
           <div className="Pet-Projects">
-            
+          <h3 className="Standart-Subheading">{currentData.mainSection.portfolio.petProjects.heading}</h3>
+          <ul className="Pet-Projects-List">
+            {currentData.mainSection.portfolio.petProjects.projects.map((item) => 
+                      <li key={item.title} className="Pet-Project-Container">
+                          <p><span>{item.title}</span> - [ <span>{item.technologies}</span> ]</p>
+                          <a className="Pet-Project-Link" href={item.link} target='blank'>{item.link}</a>
+                      </li> 
+                      )}
+          </ul>
           </div>
         </article>
       </section>

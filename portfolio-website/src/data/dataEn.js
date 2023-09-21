@@ -32,9 +32,30 @@ const dataEn = {
                     to the results of relevant tests. Since February 2023 I have been 
                     developing corporate website of the Lithuanian company UAB 
                     «FerroMetals».`,
-                    link: "https://ferrometals.netlify.app/"
+                    link: "https://ferrometals.netlify.app/",
+                    linkTitle: "Go to site"
                 }
-            ]
+            ],
+            petProjects: {
+                heading: "Pet projects",
+                projects: [
+                    {
+                        title: "Portfolio",
+                        technologies: "React, GSAP",
+                        link: "https://github.com/smyrnova-iryna/portfolio"
+                    },
+                    {
+                        title: "Contact-us form",
+                        technologies: "React, Styled components",
+                        link: "https://github.com/smyrnova-iryna/contact-us-form"
+                    },
+                    {
+                        title: "Furniture company website template",
+                        technologies: "HTML, CSS",
+                        link: "https://github.com/smyrnova-iryna/furniture"
+                    }
+                ]
+            }
         }
     },
     footer: {}
