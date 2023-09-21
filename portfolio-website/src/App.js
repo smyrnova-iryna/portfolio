@@ -99,6 +99,7 @@ function App() {
           delay: 1
         });
 
+
       }, comp); 
       
       return () => ctx.revert(); 
@@ -149,6 +150,7 @@ function App() {
               <div className="About-Main-Page">
                 <h2 className='About-Name'>{currentData.mainSection.about.name}</h2>
                 <h1 className='About-Position'>{currentData.mainSection.about.position}</h1>
+                <p className='About-Description'>{currentData.mainSection.about.description}</p>
               </div>
           </div>
               

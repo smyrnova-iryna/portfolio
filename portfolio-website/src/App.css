@@ -227,6 +227,7 @@
 .Main-Section {
   width: 100%;
   background-color: var(--main-page-color);
+  min-height: 100vh;
 }
 
 /* Main section styles/////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -241,16 +242,21 @@
 
 .About-Top-Container {
   display: flex;
-  min-height: 50vh;
+  min-height: 350px;
 }
 
 .About-Sidebar {
+  /* width: 300px; */
   /* background-color: var(--second-dark-color); */
-  width: 320px;
+  /* width: 320px; */
   /* height: 300px; */
   /* height: 40%; */
-  margin: 5% 0 5% 5%;
-  padding: 5%;
+  flex-basis: 158px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 15px 0 15px 15px;
+  padding: 10px;
+  /* padding: 5%; */
   border: 2px solid var(--first-details-color);
   display: flex;
   flex-direction: column;
@@ -263,18 +269,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  padding-left: 5px;
+  gap: 2px;
+  padding: 5px;
+  font-size: 60%;
 }
 
-.About-Name {
+/* .About-Name {
   font-size: 15px;
 }
 
 .About-Position {
   font-size: 13px;
   overflow-wrap: wrap;
-}
+} */
 
 
 .About-Sidebar-Text {
@@ -282,6 +289,41 @@
   font-weight: 200%;
   text-decoration: none;
   color: var(--second-dark-color)
+}
+
+@media screen and (min-width: 420px){
+  .About-Sidebar {
+    flex-basis: 200px;
+  }
+
+.About-Sidebar-Text {
+  font-size: 80%;
+}
+  .About-Main-Page {
+    font-size: 90%;
+    gap: 10px
+  }
+}
+
+@media screen and (min-width: 750px){
+  .About-Sidebar {
+    flex-basis: 250px;
+  }
+/* 
+.About-Sidebar-Text {
+  font-size: 80%;
+}*/
+  .About-Main-Page {
+    font-size: 120%;
+    padding: 5%;
+    gap: 5%
+  } 
+}
+
+@media screen and (min-width: 950px){
+  .About {
+    padding-top: 60px;
+  }
 }
 
 /* About section styles/////////////////////////////////////////////////////////////////////////////////////////////// */
