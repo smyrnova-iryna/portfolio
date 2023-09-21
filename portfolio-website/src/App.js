@@ -127,15 +127,14 @@ function App() {
                     <a className="Nav-Desctop-Link" href={`#${item}`} key={item}>{item}</a> 
                     )}
             </nav>
-          {/* {!animateBurgerMenu ? <MenuIcon className='Header-Menu-Button Header-Animated-Element' onClick={() => {setAnimateBurgerMenu(!animateBurgerMenu); setNavVisibility('Visible-Nav')}}/> : <CloseIcon className="Close-Button"/>} */}
-            <MenuIcon className='Header-Menu-Button Header-Animated-Element' onClick={() => {setAnimateBurgerMenu(true); setNavVisibility("Visible-Nav"); setcloseIconDisplay("block")}}/>
-            <CloseIcon style={{display: `${closeIconDisplay}`}} className='Header-Menu-Hide-Button' onClick={() => {setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} />
+            <MenuIcon className="Header-Menu-Button Header-Animated-Element" onClick={() => {setAnimateBurgerMenu(true); setNavVisibility("Visible-Nav"); setcloseIconDisplay("block")}}/>
+            <CloseIcon style={{display: `${closeIconDisplay}`}} className="Header-Menu-Hide-Button" onClick={() => {setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} />
 
         </div>
         </header>
         <nav className={`Nav ${navVisibility}`}>
             {currentData.header.navItems.map((item) => 
-                 <a className="Nav-Link" href={`#${item}`} key={item}>{item}</a> 
+                 <a onClick={() => {setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} className="Nav-Link" href={`#${item}`} key={item}>{item}</a> 
                 )}
         </nav>
       <section className="Main-Section">
@@ -143,17 +142,33 @@ function App() {
           <div className="About-Top-Container">
               <div className="About-Sidebar">
                 <img src={require('./data/img/app-photo.jpg')} alt="Foto"></img>
-                <a className='About-Sidebar-Text' href={currentData.mainSection.about.phoneNumber}>{currentData.mainSection.about.phoneNumberTitle}</a>
-                <a className='About-Sidebar-Text' href={`mailto:${currentData.header.email}`}>{currentData.header.email}</a>
-                <p className='About-Sidebar-Text'>{currentData.mainSection.about.location}</p>
+                <a className="About-Sidebar-Text About-Sidebar-Link" href={currentData.mainSection.about.phoneNumber}>{currentData.mainSection.about.phoneNumberTitle}</a>
+                <a className="About-Sidebar-Text About-Sidebar-Link" href={`mailto:${currentData.header.email}`}>{currentData.header.email}</a>
+                <p className="About-Sidebar-Text">{currentData.mainSection.about.location}</p>
               </div>
               <div className="About-Main-Page">
-                <h2 className='About-Name'>{currentData.mainSection.about.name}</h2>
-                <h1 className='About-Position'>{currentData.mainSection.about.position}</h1>
-                <p className='About-Description'>{currentData.mainSection.about.description}</p>
+                <h2 className="About-Name">{currentData.mainSection.about.name}</h2>
+                <h1 className="About-Position">{currentData.mainSection.about.position}</h1>
+                <p className="About-Description">{currentData.mainSection.about.description}</p>
               </div>
+          </div>  
+        </article>
+        <article className="Portfolio">
+        <div className="Portfolio-anchor" id="Portfolio"></div>
+          <h2 className="Standart-Heading">{currentData.mainSection.portfolio.heading}</h2>
+          <div className="Projects">
+            <h3 className="Standart-Subheading">{currentData.mainSection.portfolio.projects[0].title}</h3>
+            <div className="Projects-Container">
+              <p className="Project-Description">{currentData.mainSection.portfolio.projects[0].description}</p>
+              <a className="Project-Link" href={currentData.mainSection.portfolio.projects[0].link}>
+                <p>{currentData.mainSection.portfolio.projects[0].link}</p>
+                <img src={require("./data/img/ferrometals-preview-image.png")} target="blank" alt="FerroMetals website preview"></img>
+              </a>
+            </div>
           </div>
-              
+          <div className="Pet-Projects">
+            
+          </div>
         </article>
       </section>
       <footer className="Footer">

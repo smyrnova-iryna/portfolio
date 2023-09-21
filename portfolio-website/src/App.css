@@ -44,6 +44,7 @@
   user-select: none;
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -236,8 +237,6 @@
 
 .About {
   padding-top: 40px;
-  
-  /* flex-direction: column; */
 }
 
 .About-Top-Container {
@@ -246,17 +245,11 @@
 }
 
 .About-Sidebar {
-  /* width: 300px; */
-  /* background-color: var(--second-dark-color); */
-  /* width: 320px; */
-  /* height: 300px; */
-  /* height: 40%; */
   flex-basis: 158px;
   flex-grow: 0;
   flex-shrink: 0;
   margin: 15px 0 15px 15px;
   padding: 10px;
-  /* padding: 5%; */
   border: 2px solid var(--first-details-color);
   display: flex;
   flex-direction: column;
@@ -265,7 +258,6 @@
 
 .About-Main-Page {
   background-color: var(--third-details-color);
-  /* height: 315px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -274,21 +266,19 @@
   font-size: 60%;
 }
 
-/* .About-Name {
-  font-size: 15px;
-}
-
-.About-Position {
-  font-size: 13px;
-  overflow-wrap: wrap;
-} */
-
-
 .About-Sidebar-Text {
   font-size: 60%;
   font-weight: 200%;
   text-decoration: none;
   color: var(--second-dark-color)
+}
+
+.About-Sidebar-Link {
+  color: var(--first-details-color);
+}
+
+.About-Sidebar-Link:hover {
+  color: var(--second-details-color);
 }
 
 @media screen and (min-width: 420px){
@@ -301,18 +291,19 @@
 }
   .About-Main-Page {
     font-size: 90%;
-    gap: 10px
+    gap: 10px;
+    padding: 10px;
   }
+  .About-Description {
+    text-align: justify;
+  } 
 }
 
 @media screen and (min-width: 750px){
   .About-Sidebar {
     flex-basis: 250px;
   }
-/* 
-.About-Sidebar-Text {
-  font-size: 80%;
-}*/
+
   .About-Main-Page {
     font-size: 120%;
     padding: 5%;
@@ -328,8 +319,63 @@
 
 /* About section styles/////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* Portfolio styles/////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.Portfolio {
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  font-size: 60%;
+  font-weight: 200%;
+  color: var(--second-dark-color);
+  margin: 5px;
+  position: relative;
+}
+
+.Portfolio-anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 2px solid pink;
+  top: -40px
+  /* top: -60px */
+}
+
+/* #Portfolio:target { scroll-margin-top: 60px; } */
+
+.Projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.Standart-Heading {
+  width: max-content;
+  background: linear-gradient(to top, var(--third-details-color) 40%, var(--main-page-color) 40%);
+  border-bottom: 2px solid var(--first-details-color);
+}
+
+.Standart-Subheading {
+  color: var(--first-details-color);
+}
+
+.Project-Description {
+  text-align: justify;
+}
+
+.Projects-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Portfolio styles/////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .Footer {
   width: 100%;
   background-color: var(--main-dark-color);
   height: 200px;
+
 }
