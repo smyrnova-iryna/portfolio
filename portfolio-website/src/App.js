@@ -11,6 +11,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import DownloadIcon from '@mui/icons-material/Download';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import { gsap } from "gsap";
 
@@ -287,9 +291,31 @@ function App() {
             </div>
           </div>
         </article>
+        <article className="Standart-Section-Container">
+          <div className="CV-anchor" id="CV"></div>
+          <h2 className="Standart-Heading">{currentData.mainSection.cV.heading}</h2>
+          <div className="Standart-Block CV-Block">
+                <img className="CV-Preview" src={require("./data/img/cv-preview-image.png")} alt="CV preview"></img>
+                <div className="CV-Links-Container">
+                  <a className="Project-Link-Title CV-Link" href={require("./data/img/cv_smyrnova_iryna.pdf")} target='blank'>{currentData.mainSection.cV.view}<ArrowForwardIosIcon className='Standart-Icon' /></a>
+                  <a className="Project-Link-Title CV-Link" href={require("./data/img/cv_smyrnova_iryna.pdf")} download="CV_Smyrnova_Iryna" >{currentData.mainSection.cV.download}<DownloadIcon className='Standart-Icon' /></a>
+                </div>
+          </div>
+        </article>
+        <article className="Standart-Section-Container">
+          <div className="ContactMe-anchor" id="ContactMe"></div>
+          <h2 className="Standart-Heading">{currentData.mainSection.contactMe.heading}</h2>
+          <div className="Standart-Block">
+               <div className="ContactMe-Contacts-Container">
+                  
+                </div> 
+               <div className="ContactMe-Contact-Form-Container">
+
+               </div>
+          </div>
+        </article>
       </section>
       <footer className="Footer">
-
       </footer>
     </div>
   );

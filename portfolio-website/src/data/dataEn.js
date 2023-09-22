@@ -4,7 +4,7 @@ const dataEn = {
         linkedIn: "LinkedIn",
         linkedInHref: "https://www.linkedin.com/in/iryna-smyrnova-74461a261/",
         email: "iryna.smyrnova12@gmail.com",
-        navItems: ["Portfolio", "Experience", "Skills", "CV", "Contact me"],
+        navItems: ["Portfolio", "Experience", "Skills", "CV", "ContactMe"],
 
     },
     mainSection: {
@@ -116,6 +116,23 @@ const dataEn = {
             softSkills: {
                 title: "Soft skills",
                 skillsList: ["Teamwork", " Time management", "Critical thinking", "Communication", "Creativity", "Learnability", "Attention to details"]
+            }
+        },
+        cV:  {
+            heading: "CV",
+            download: "Download",
+            view: "View"
+        },
+        contactMe: {
+            heading: "Contact me",
+            contactsList: {
+                github: "https://github.com/smyrnova-iryna"
+            },
+            contactForm: {
+                title: "Contact me",
+                name: "Name",
+                subject: "Subject",
+                contactInformation: "Contact information"
             }
         }
     },
