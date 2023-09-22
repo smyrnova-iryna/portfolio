@@ -191,7 +191,7 @@ function App() {
               </div>
           </div>  
         </article>
-        <article className="Portfolio">
+        <article className="Standart-Section-Container">
         <div className="Portfolio-anchor" id="Portfolio"></div>
           <h2 className="Standart-Heading">{currentData.mainSection.portfolio.heading}</h2>
           <div className="Projects">
@@ -206,19 +206,20 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="Pet-Projects">
+          <div className="Standart-List-Outer-Container">
           <h3 className="Standart-Subheading">{currentData.mainSection.portfolio.petProjects.heading}</h3>
-          <ul className="Pet-Projects-List">
+          <ul className="Standart-List">
             {currentData.mainSection.portfolio.petProjects.projects.map((item) => 
-                      <li key={item.title} className="Pet-Project-Container">
+                      <li key={item.title} className="Standart-List-Container">
                           <p><span>{item.title}</span> - [ <span>{item.technologies}</span> ]</p>
                           <a className="Pet-Project-Link" href={item.link} target='blank'>{item.link}</a>
                       </li> 
                       )}
           </ul>
+
           </div>
         </article>
-        <article className="Experience">
+        <article className="Standart-Section-Container">
           <div className="Experience-anchor" id="Experience"></div>
           <h2 className="Standart-Heading">{currentData.mainSection.experience.heading}</h2>
           <div className='Experience-Block'>
@@ -233,9 +234,29 @@ function App() {
             <p>[ {currentData.mainSection.experience.volunteering.date} ]</p>
           </div>
           <div className='Experience-Block'>
-            <div className='Experience-Courses-Block'>
-              
+            <div className='Standart-List-Outer-Container'>
+            <h3 className="Standart-Subheading">{currentData.mainSection.experience.courses.title}</h3>
+              <ul className="Standart-List">
+              {currentData.mainSection.experience.courses.coursesList.map((item) => 
+                        <li key={item.title} className="Standart-List-Container">
+                            <p>{item.title}</p>
+                            <p>[ {item.date} ]</p>
+                        </li> 
+                        )}
+             </ul>
             </div>
+          </div>
+          <div className="Experience-Block">
+            <div className='Standart-List-Outer-Container'>
+              <h3 className="Standart-Subheading">{currentData.mainSection.experience.languages.title}</h3>
+                <ul className="Standart-List">
+                {currentData.mainSection.experience.languages.languagesList.map((item) => 
+                          <li key={item.title} className="Standart-List-Container">
+                              <p>{item.title} - {item.level}</p>
+                          </li> 
+                          )}
+              </ul>
+              </div>
           </div>
         </article>
       </section>

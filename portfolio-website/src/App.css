@@ -321,7 +321,7 @@
 
 /* Portfolio styles/////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.Portfolio, .Experience {
+.Standart-Section-Container {
   /* background-color: pink; */
   display: flex;
   flex-direction: column;
@@ -370,19 +370,19 @@
   text-align: justify;
 }
 
-.Projects-Container, .Pet-Projects {
+.Projects-Container, .Standart-List-Outer-Container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.Pet-Projects-List {
+.Standart-List {
   display: flex;
   flex-direction: column;
   gap: 7px
 }
 
-.Pet-Project-Container {
+.Standart-List-Container {
   background: linear-gradient(to right, var(--third-details-color) 5px, var(--main-page-color) 5px);
   padding-left: 10px;
 }
@@ -473,7 +473,7 @@
 }
 
 @media screen and (min-width: 420px){
-  .Portfolio {
+  .Standart-Section-Container {
     font-size: 90%;
   }
   .Project-Link-Title {
@@ -487,7 +487,7 @@
 }
 
 @media screen and (min-width: 750px){
-  .Portfolio {
+  .Standart-Section-Container {
     font-size: 120%;
     padding: 3% 6% 6%6%;
     gap: 40px
@@ -498,11 +498,11 @@
     padding: 30px;
   }
 
-  .Projects-Container, .Pet-Projects {
+  .Projects-Container, .Standart-List-Outer-Container {
     gap: 30px;
   }
 
-  .Pet-Projects-List {
+  .Standart-List{
     gap: 25px
   }
 }
