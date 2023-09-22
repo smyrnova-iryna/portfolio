@@ -194,7 +194,7 @@ function App() {
         <article className="Standart-Section-Container">
         <div className="Portfolio-anchor" id="Portfolio"></div>
           <h2 className="Standart-Heading">{currentData.mainSection.portfolio.heading}</h2>
-          <div className="Projects">
+          <div className="Standart-Block">
             <h3 className="Standart-Subheading">{currentData.mainSection.portfolio.projects[0].title}</h3>
             <div className="Projects-Container">
               <p className="Standart-Description">{currentData.mainSection.portfolio.projects[0].description}</p>
@@ -222,18 +222,18 @@ function App() {
         <article className="Standart-Section-Container">
           <div className="Experience-anchor" id="Experience"></div>
           <h2 className="Standart-Heading">{currentData.mainSection.experience.heading}</h2>
-          <div className='Experience-Block'>
+          <div className='Standart-Block'>
             <h3 className="Standart-Subheading">{currentData.mainSection.experience.job.title}</h3>
             <p className="Standart-Description">{currentData.mainSection.experience.job.description}</p>
             <p>[ {currentData.mainSection.experience.job.date} ]</p>
           </div>
-          <div className='Experience-Block'>
+          <div className='Standart-Block'>
             <h3 className="Standart-Subheading">{currentData.mainSection.experience.volunteering.title}</h3>
             <h4 className="Standart-Micro-Heading">{currentData.mainSection.experience.volunteering.subTitle}</h4>
             <p className="Standart-Description">{currentData.mainSection.experience.volunteering.description}</p>
             <p>[ {currentData.mainSection.experience.volunteering.date} ]</p>
           </div>
-          <div className='Experience-Block'>
+          <div className='Standart-Block'>
             <div className='Standart-List-Outer-Container'>
             <h3 className="Standart-Subheading">{currentData.mainSection.experience.courses.title}</h3>
               <ul className="Standart-List">
@@ -246,7 +246,7 @@ function App() {
              </ul>
             </div>
           </div>
-          <div className="Experience-Block">
+          <div className="Standart-Block">
             <div className='Standart-List-Outer-Container'>
               <h3 className="Standart-Subheading">{currentData.mainSection.experience.languages.title}</h3>
                 <ul className="Standart-List">
@@ -257,6 +257,34 @@ function App() {
                           )}
               </ul>
               </div>
+          </div>
+        </article>
+        <article className="Standart-Section-Container">
+          <div className="Skills-anchor" id="Experience"></div>
+          <h2 className="Standart-Heading">{currentData.mainSection.skills.heading}</h2>
+          <div className="Standart-Block">
+            <div className="Skills-Extra-Container">
+            <div className="Standart-List-Outer-Container Skills-List-Outer-Container">
+              <h3 className="Standart-Subheading">{currentData.mainSection.skills.hardSkills.title}</h3>
+                <ul className="Standart-List">
+                {currentData.mainSection.skills.hardSkills.skillsList.map((item) => 
+                          <li key={item} className="Standart-List-Container">
+                              <p>{item}</p>
+                          </li> 
+                          )}
+              </ul>
+              </div>
+              <div className="Standart-List-Outer-Container Skills-List-Outer-Container">
+              <h3 className="Standart-Subheading">{currentData.mainSection.skills.softSkills.title}</h3>
+                <ul className="Standart-List">
+                {currentData.mainSection.skills.softSkills.skillsList.map((item) => 
+                          <li key={item} className="Standart-List-Container">
+                              <p>{item}</p>
+                          </li> 
+                          )}
+              </ul>
+              </div>
+            </div>
           </div>
         </article>
       </section>

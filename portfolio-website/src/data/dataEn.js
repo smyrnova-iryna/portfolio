@@ -106,6 +106,17 @@ const dataEn = {
                     }
                 ]
             }
+        },
+        skills: {
+            heading: "Skills",
+            hardSkills: {
+                title: "Hard skills",
+                skillsList: ["HTML", "CSS", "JavaScript", "React", "Styled components", "MUI", "GSAP", "Git"]
+            },
+            softSkills: {
+                title: "Soft skills",
+                skillsList: ["Teamwork", " Time management", "Critical thinking", "Communication", "Creativity", "Learnability", "Attention to details"]
+            }
         }
     },
     footer: {}

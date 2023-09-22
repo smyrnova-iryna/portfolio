@@ -334,7 +334,7 @@
   position: relative;
 }
 
-.Portfolio-anchor, .Experience-anchor {
+.Portfolio-anchor, .Experience-anchor, .Skills-anchor {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -344,7 +344,7 @@
 
 /* #Portfolio:target { scroll-margin-top: 60px; } */
 
-.Projects, .Experience-Block {
+.Standart-Block {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -517,6 +517,47 @@
 }
 
 /* Experience styles////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Skills styles////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.Skills-Extra-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 230px;
+}
+
+.Skills-List-Outer-Container {
+  border-left: 2px solid var(--first-details-color);
+  padding-left: 5%;
+}
+
+@media screen and (min-width: 300px) {
+  .Skills-Extra-Container {
+    max-width: 290px;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .Skills-Extra-Container {
+    max-width: 390px;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  .Skills-Extra-Container {
+    min-width: 500px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .Skills-Extra-Container {
+    min-width: 700px;
+  }
+}
+
+
+/* Skills styles////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .Footer {
   width: 100%;
