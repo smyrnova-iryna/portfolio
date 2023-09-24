@@ -4,6 +4,7 @@ const dataEn = {
         linkedIn: "LinkedIn",
         linkedInHref: "https://www.linkedin.com/in/iryna-smyrnova-74461a261/",
         email: "iryna.smyrnova12@gmail.com",
+        emailHref: "mailto:iryna.smyrnova12@gmail.com",
         navItems: ["Portfolio", "Experience", "Skills", "CV", "ContactMe"],
 
     },
@@ -131,7 +132,7 @@ const dataEn = {
             contactForm: {
                 title: "Contact me",
                 name: "Name",
-                subject: "Subject",
+                subject: "Message",
                 contactInformation: "Contact information"
             }
         }

@@ -15,6 +15,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import DownloadIcon from '@mui/icons-material/Download';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 import { gsap } from "gsap";
 
@@ -147,7 +148,8 @@ function App() {
 
     }
     
-  }, [animateWebsiteLinkTo, animateWebsiteLinkFrom])
+  }, [animateWebsiteLinkTo, animateWebsiteLinkFrom]);
+  
 
 
   return (
@@ -159,7 +161,7 @@ function App() {
               <button className="Header-Button Header-Animated-Element" onClick={() => {changeLanguage(dataUkr)}}>UKR</button>
           </div>
             <div className="Header-Links-Container">
-              <a className="Header-Link Header-Animated-Element" href={`mailto:${currentData.header.email}`}><MailOutlineIcon className='Header-Email-Icon'/></a>
+              <a className="Header-Link Header-Animated-Element" href={currentData.header.emailHref}><MailOutlineIcon className='Header-Email-Icon'/></a>
               <a className="Header-Link Header-Animated-Element" href={currentData.header.linkedInHref}>{currentData.header.linkedIn}</a>
             </div>
         </div>
@@ -302,16 +304,22 @@ function App() {
                 </div>
           </div>
         </article>
-        <article className="Standart-Section-Container">
+        <article className="Standart-Section-Container ContactMe-Section-Container">
           <div className="ContactMe-anchor" id="ContactMe"></div>
-          <h2 className="Standart-Heading">{currentData.mainSection.contactMe.heading}</h2>
-          <div className="Standart-Block">
+          <h2 className="Standart-Heading ContactMe-Heading">{currentData.mainSection.contactMe.heading}</h2>
+          <div className="Standart-Block ContactMe-Block">
                <div className="ContactMe-Contacts-Container">
-                  
+                  <a href={currentData.mainSection.about.phoneNumber} className="Standart-List-Container ContactMe-Link"><LocalPhoneIcon className='Standart-Icon' /> {currentData.mainSection.about.phoneNumberTitle}</a>
+                  <a href={currentData.header.linkedInHref} className="Standart-List-Container ContactMe-Link"><LinkedInIcon className='Standart-Icon' /> {currentData.header.linkedInHref}</a>
+                  <a href={currentData.header.emailHref} className="Standart-List-Container ContactMe-Link"><MailOutlineIcon className='Standart-Icon' /> {currentData.header.email}</a>
+                  <a href={currentData.mainSection.contactMe.contactsList.github} className="Standart-List-Container ContactMe-Link"><GitHubIcon className='Standart-Icon' /> {currentData.mainSection.contactMe.contactsList.github}</a>
                 </div> 
-               <div className="ContactMe-Contact-Form-Container">
-
-               </div>
+               <form className="ContactMe-Contact-Form-Container">
+                  <p>{currentData.mainSection.contactMe.contactForm.title}</p>
+                  <input placeholder={currentData.mainSection.contactMe.contactForm.name}></input>
+                  {/* <input>{currentData.mainSection.contactMe.contactForm.subject}</input> */}
+                  {/* <input>{currentData.mainSection.contactMe.contactForm.contactInformation}</input> */}
+               </form>
           </div>
         </article>
       </section>
