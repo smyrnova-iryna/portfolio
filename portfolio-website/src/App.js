@@ -34,7 +34,9 @@ function App() {
 
   const [navVisibility, setNavVisibility] = useState("");
 
-  const [closeIconDisplay, setcloseIconDisplay] = useState("none")
+  const [closeIconDisplay, setcloseIconDisplay] = useState("none");
+
+  const [menuDisplay, setMenuDisplay] = useState("block")
   
   const changeLanguage = (dataValue) => {
     setCurrentData(dataValue);
@@ -97,11 +99,11 @@ function App() {
           x: 5000
         }); 
 
-        tl1.to(".Header-Menu-Button", 
-        { 
-          duration: 0.5,
-          x: 500
-        }); 
+        // tl1.to(".Header-Menu-Button", 
+        // { 
+        //   duration: 0.5,
+        //   x: 500
+        // }); 
         
         gsap.from(".Header-Menu-Hide-Button", 
         { 
@@ -171,14 +173,14 @@ function App() {
                     <a className="Nav-Desctop-Link" href={`#${item}`} key={item}>{item}</a> 
                     )}
             </nav>
-            <MenuIcon className="Header-Menu-Button Header-Animated-Element" onClick={() => {setAnimateBurgerMenu(true); setNavVisibility("Visible-Nav"); setcloseIconDisplay("block")}}/>
-            <CloseIcon style={{display: `${closeIconDisplay}`}} className="Header-Menu-Hide-Button" onClick={() => {setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} />
+            <MenuIcon style={{display: `${menuDisplay}`}} className="Header-Menu-Button Header-Animated-Element" onClick={() => {setMenuDisplay("none"); setNavVisibility("Visible-Nav"); setAnimateBurgerMenu(true); setcloseIconDisplay("block")}}/>
+            <CloseIcon style={{display: `${closeIconDisplay}`}} className="Header-Menu-Hide-Button" onClick={() => {setMenuDisplay("block"); setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} />
 
         </div>
         </header>
         <nav className={`Nav ${navVisibility}`}>
             {currentData.header.navItems.map((item) => 
-                 <a onClick={() => {setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} className="Nav-Link" href={`#${item}`} key={item}>{item}</a> 
+                 <a onClick={() => {setMenuDisplay("block"); setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} className="Nav-Link" href={`#${item}`} key={item}>{item}</a> 
                 )}
         </nav>
       <section className="Main-Section">
@@ -266,7 +268,7 @@ function App() {
           </div>
         </article>
         <article className="Standart-Section-Container">
-          <div className="Skills-anchor" id="Experience"></div>
+          <div className="Skills-anchor" id="Skills"></div>
           <h2 className="Standart-Heading">{currentData.mainSection.skills.heading}</h2>
           <div className="Standart-Block">
             <div className="Skills-Extra-Container">
@@ -315,10 +317,11 @@ function App() {
                   <a href={currentData.mainSection.contactMe.contactsList.github} className="Standart-List-Container ContactMe-Link"><GitHubIcon className='Standart-Icon' /> {currentData.mainSection.contactMe.contactsList.github}</a>
                 </div> 
                <form className="ContactMe-Contact-Form-Container">
-                  <p>{currentData.mainSection.contactMe.contactForm.title}</p>
-                  <input placeholder={currentData.mainSection.contactMe.contactForm.name}></input>
-                  {/* <input>{currentData.mainSection.contactMe.contactForm.subject}</input> */}
-                  {/* <input>{currentData.mainSection.contactMe.contactForm.contactInformation}</input> */}
+                  <h3 className="Standart-Subheading">{currentData.mainSection.contactMe.contactForm.title}</h3>
+                  <input style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" required placeholder={currentData.mainSection.contactMe.contactForm.name}></input>
+                  <input style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" required placeholder={currentData.mainSection.contactMe.contactForm.subject}></input>
+                  <input style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" placeholder={currentData.mainSection.contactMe.contactForm.contactInformation}></input>
+                  <button className="Project-Link-Title ContactMe-Button">{currentData.mainSection.contactMe.contactForm.submitText}<ArrowForwardIosIcon className='Standart-Icon' /></button>
                </form>
           </div>
         </article>

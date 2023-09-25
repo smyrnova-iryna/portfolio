@@ -133,7 +133,8 @@ const dataEn = {
                 title: "Contact me",
                 name: "Name",
                 subject: "Message",
-                contactInformation: "Contact information"
+                contactInformation: "Contact information",
+                submitText: "Send"
             }
         }
     },

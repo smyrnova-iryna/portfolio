@@ -137,19 +137,25 @@
 
 .Nav {
   padding: 40px;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--main-dark-color);
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* position: sticky; */
+  /* position: absolute; */
   z-index: 80;
   display: none;
+
   /* margin-left: 100%; */
 }
 
 .Visible-Nav {
   display: block;
+  bottom: 0;
 }
 
 .Nav-Link {
@@ -625,9 +631,31 @@
   color: var(--second-details-color);
 }
 
-.ContactMe-Heading {
+.ContactMe-Heading, .ContactMe-Contact-Form-Container {
   margin-left: 15px;
 }
+
+.ContactMe-Contact-Form-Container {
+  border: 3px solid var(--first-details-color);
+  padding: 15px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ContactMe-Input {
+  padding: 5px;
+  background-color: var(--main-page-color);
+  border: none;
+  border-bottom: 3px solid var(--third-details-color);
+}
+
+.ContactMe-Input::placeholder {
+  color: var(--first-details-color);
+}
+
 
 .ContactMe-Block {
   display: flex;
