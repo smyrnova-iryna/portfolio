@@ -482,6 +482,7 @@
   .Standart-Section-Container {
     font-size: 90%;
   }
+
   .Project-Link-Title {
     padding: 10px;
   }
@@ -495,7 +496,7 @@
 @media screen and (min-width: 750px){
   .Standart-Section-Container {
     font-size: 120%;
-    padding: 3% 6% 6%6%;
+    padding: 3% 6% 6% 6%;
     gap: 40px
   } 
 
@@ -676,6 +677,108 @@
 .ContactMe-Section-Container {
   padding-left: 0;
   margin-left: 0;
+}
+
+@media screen and (min-width: 320px) {
+  .ContactMe-Contact-Form-Container {
+    width: 280px;
+    height: 250px;
+    align-self: center;
+  }
+
+  .ContactMe-Contacts-Container {
+    padding: 15px;
+    width: 280px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 420px){
+  .ContactMe-Input::placeholder , .ContactMe-Button {
+    font-size: 120%;
+  }
+
+  .ContactMe-Contact-Form-Container {
+    height: 350px;
+    width: 270px;
+  }
+
+  .ContactMe-Contacts-Container {
+    padding: 15px;
+    width: 350px;
+    height: 300px;
+  }
+
+  .ContactMe-Block {
+    gap: 15px;
+  }
+
+}
+
+@media screen and (min-width: 620px){
+  .ContactMe-Block {
+    flex-direction: row;
+    justify-content: left;
+  }
+}
+
+@media screen and (min-width: 750px){
+  .ContactMe-Heading {
+    margin: 0 0 7% 7%
+  }
+
+  .ContactMe-Input::placeholder {
+    font-size: 180%;
+  }
+
+  .ContactMe-Button {
+    font-size: 120%;
+  }
+
+  .ContactMe-Contact-Form-Container {
+    height: 450px;
+    width: 390px;
+    padding: 0;
+  }
+
+ .ContactMe-Contacts-Container {
+  height: 400px;
+  width: 370px;
+ }
+
+  .ContactMe-Input {
+    width: 80%;
+  }
+
+  .ContactMe-Block {
+    justify-content: space-between;
+  }
+
+  .ContactMe-Section-Container {
+    gap: 0;
+    padding-top: 0;
+  }
+
+}
+
+@media screen and (min-width: 920px) {
+  .ContactMe-Contact-Form-Container {
+    height: 500px;
+    width: 450px;
+  }
+
+ .ContactMe-Contacts-Container {
+  height: 400px;
+  width: 350px;
+ }
+
+ .ContactMe-Input {
+  padding: 20px;
+}
+
+ .ContactMe-Block {
+  max-width: 1000px;
+}
 }
 
 /* Contact Me styles////////////////////////////////////////////////////////////////////////////////////////////////// */
