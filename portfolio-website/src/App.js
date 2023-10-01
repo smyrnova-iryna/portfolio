@@ -16,6 +16,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 import { gsap } from "gsap";
 
@@ -169,7 +170,7 @@ function App() {
         </div>
         <div className="Header-Right-Container">
             <nav className="Desctop-Nav">
-                {currentData.header.navItems.map((item) => 
+                {currentData.header.navItems.slice(1,6).map((item) => 
                     <a className="Nav-Desctop-Link" href={`#${item}`} key={item}>{item}</a> 
                     )}
             </nav>
@@ -326,7 +327,27 @@ function App() {
           </div>
         </article>
       </section>
-      <footer className="Footer">
+      <footer className="Standart-Section-Container Footer">
+      {/* <img className="Footer-Logo" src={require('./data/img/portfolio-logo.png')} alt="Portfolio logo"></img> */}
+      <div className="Footer-Nav-Container">
+      <nav className="Footer-Nav">
+        {currentData.header.navItems.slice(0,3).map((item) => 
+          <a className="Footer-Link" href={`#${item}`} key={item}>{item}</a> 
+        )}
+      </nav>
+      <nav className="Footer-Nav">
+        {currentData.header.navItems.slice(3,6).map((item) => 
+          <a className="Footer-Link" href={`#${item}`} key={item}>{item}</a> 
+        )}
+      </nav>
+      </div>
+      <div className="Footer-Contacts">
+        <p className="Footer-Text"><LocationOnIcon className='Standart-Icon' />{currentData.mainSection.about.location}</p>
+        <a className="Footer-Contact-Link" href={currentData.mainSection.about.phoneNumber}><LocalPhoneIcon className='Standart-Icon' />{currentData.footer.contacts.phone}</a>
+        <a className="Footer-Contact-Link" href={`mailto:${currentData.header.email}`}><MailOutlineIcon className='Standart-Icon' />{currentData.footer.contacts.email}</a>
+        <a href={currentData.header.linkedInHref} className="Footer-Contact-Link"><LinkedInIcon className='Standart-Icon' /> {currentData.footer.contacts.linkedIn}</a>
+        <a href={currentData.mainSection.contactMe.contactsList.github} className="Footer-Contact-Link"><GitHubIcon className='Standart-Icon' /> {currentData.footer.contacts.github}</a>
+      </div>
       </footer>
     </div>
   );

@@ -769,7 +769,7 @@
 
  .ContactMe-Contacts-Container {
   height: 400px;
-  width: 350px;
+  width: 400px;
  }
 
  .ContactMe-Input {
@@ -787,7 +787,85 @@
 
 .Footer {
   width: 100%;
+  margin: 0;
   background-color: var(--main-dark-color);
   height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 30px;
+}
 
+.Footer-Logo {
+  flex-basis: 50px;
+  display: none;
+}
+
+.Footer-Nav {
+  height: 45%;
+}
+
+.Footer-Contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-size: 110%;
+  min-width: 100px;
+}
+
+.Footer-Nav-Container , .Footer-Contacts {
+  height: 100%;
+}
+
+.Footer-Nav-Container, .Footer-Nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.Footer-Link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 140%;
+  color: var(--third-details-color);
+}
+
+.Footer-Contact-Link , .Footer-Text {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2px;
+  text-decoration: none;
+  color: var(--main-page-color);
+}
+
+.Footer-Contact-Link:hover {
+  color: var(--second-details-color);
+}
+
+.Footer-Link:hover {
+  background-color: var(--second-details-color);
+  color: var(--second-dark-color);
+}
+
+@media screen and (min-width: 500px){
+  .Footer-Nav-Container {
+    flex-direction: row;
+    gap: 5%;
+    min-width: 60%;
+    align-items: center;
+  }
+  .Footer-Nav {
+    flex-basis: 45%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 920px){
+  .Footer {
+    padding: 15px 10%;
+  }
 }

@@ -5,7 +5,7 @@ const dataEn = {
         linkedInHref: "https://www.linkedin.com/in/iryna-smyrnova-74461a261/",
         email: "iryna.smyrnova12@gmail.com",
         emailHref: "mailto:iryna.smyrnova12@gmail.com",
-        navItems: ["Portfolio", "Experience", "Skills", "CV", "ContactMe"],
+        navItems: ["About me", "Portfolio", "Experience", "Skills", "CV", "Contact me"],
 
     },
     mainSection: {
@@ -138,7 +138,14 @@ const dataEn = {
             }
         }
     },
-    footer: {}
+    footer: {
+        contacts: {
+            phone: "Call",
+            email: "Email",
+            linkedIn: "LinkedIn",
+            github: "Github"
+        }
+    }
 }
 
 export default dataEn
