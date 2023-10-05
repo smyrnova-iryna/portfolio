@@ -1,5 +1,5 @@
-// import logo from './logo.svg';
-import { useState, useLayoutEffect, useRef } from 'react';
+
+import { useState, useLayoutEffect, useRef} from 'react';
 
 import './App.css';
 
@@ -18,10 +18,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
@@ -81,12 +82,328 @@ function App() {
         x: -500,
       });
 
+      gsap.from(".About-Main-Page", 
+      { 
+        duration: 1,
+        x: 500,
+      });
+
+      // gsap.from(".Skills-Heading", 
+      // { 
+      //   duration: 0.5,
+      //   x: 500,
+      //   delay: 1,
+      //   scrollTrigger: {
+      //     trigger: "#Skills"
+      //   }
+      // });
+
 
     }, comp); 
     
     return () => ctx.revert(); 
     
   }, []);
+
+
+  
+
+  // Scroll animation test
+
+  // const circleRef = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+
+      // Headings animation ///////////////////////////////////////////////////////////////////////////////////////////
+      
+      gsap.from(".Experience-Heading", {
+        x: 30,
+        duration: 2,
+        ease: "bounce",
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Experience-Heading"
+        }
+      });
+      
+      gsap.from(".Portfolio-Heading", {
+        x: 30,
+        duration: 2,
+        ease: "bounce",
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Portfolio-Heading"
+        }
+      });
+
+      gsap.from(".Skills-Heading", {
+        x: 30,
+        duration: 2,
+        ease: "bounce",
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Skills-Heading"
+        }
+      });
+
+      gsap.from(".CV-Heading", {
+        x: 30,
+        duration: 2,
+        ease: "bounce",
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".CV-Heading"
+        }
+      });
+
+      gsap.from(".ContactMe-Heading", {
+        x: 30,
+        duration: 2,
+        ease: "bounce",
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".ContactMe-Heading"
+        }
+      });
+
+      // Headings animation ///////////////////////////////////////////////////////////////////////////////////////////
+
+      // Blocks animation /////////////////////////////////////////////////////////////////////////////////////////////
+
+      gsap.from(".Experience-Block", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Experience-Block"
+        }
+      });
+
+      gsap.from(".Experience-Volunteering-Block", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Experience-Volunteering-Block"
+        }
+      });
+
+      gsap.from(".Languages", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Languages"
+        }
+      });
+
+      gsap.from(".Courses", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Courses"
+        }
+      });
+
+      gsap.from(".Portfolio-Subheading", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Portfolio-Subheading"
+        }
+      });
+
+      gsap.from(".Portfolio-Container", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Portfolio-Container"
+        }
+      });
+
+      gsap.from(".Project-Link", {
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Project-Link"
+        }
+      });
+
+      gsap.from(".Pet-Projects-Heading", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Pet-Projects-Heading"
+        }
+      });     
+
+      gsap.from(".Hard-Skills-Heading", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Hard-Skills-Heading"
+        }
+      }); 
+
+      gsap.from(".Soft-Skills-Heading", {
+        x: 30,
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".Soft-Skills-Heading"
+        }
+      }); 
+
+      gsap.from(".CV-Preview", {
+        scale: 0,
+        duration: 1.5,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".CV-Preview"
+        }
+      });
+
+      gsap.from(".CV-Link", {
+        scale: 0,
+        duration: 1.5,
+        delay: 1,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".CV-Link"
+        }
+      });
+
+      gsap.from(".ContactMe-Contact-Form-Container", {
+        scale: 0,
+        duration: 2,
+        delay: 1,
+        scrollTrigger: {
+          trigger: ".ContactMe-Contact-Form-Container"
+        }
+      });
+     
+    // Blocks animation /////////////////////////////////////////////////////////////////////////////////////////////
+
+      gsap.from(".Courses-Item", {
+        x: 300,
+        duration: 1.5,
+        delay: 0.5,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".Courses-Item"
+        }
+      });
+
+      gsap.from(".Languages-Item", {
+        x: 300,
+        duration: 1.5,
+        delay: 0.5,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".Languages-Item"
+        }
+      });
+
+      gsap.from(".Pet-Project-Item", {
+        x: 300,
+        duration: 1.5,
+        delay: 0.5,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".Pet-Project-Item"
+        }
+      });
+
+      gsap.from(".Hard-Skills-Item", {
+        x: 300,
+        duration: 1.5,
+        delay: 0.5,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".Hard-Skills-Item"
+        }
+      });
+
+      gsap.from(".Soft-Skills-Item", {
+        x: 300,
+        duration: 1,
+        delay: 0.5,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".Soft-Skills-Item"
+        }
+      });
+
+      gsap.from(".ContactMe-Link", {
+        x: 400,
+        duration: 1,
+        delay: 0.5,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".ContactMe-Link"
+        }
+      });  
+
+      // Languages
+      
+
+
+    }, comp); 
+    
+    return () => ctx.revert(); 
+
+    
+  }, []);
+
+  // Scroll animation test
+
+  // Scroll animation for About-Main-Page
+  // const aboutRef = useRef();
+
+  // useEffect(() => {
+  //   gsap.to(".About-Main-Page", {
+  //     x: 100,
+  //     duration: 2,
+  //     ease: "bounce",
+  //     delay: 1,
+  //     scrollTrigger: {
+  //       trigger: ".About-Main-Page"
+  //     }
+  //   });
+  // }, [circleRef]);
+   // Scroll animation for About-Main-Page
+
+// Scroll animation for Contact Me
+  // const contactMeRef = useRef();
+
+  // useEffect(() => {
+  //   gsap.from(".ContactMe-Heading", {
+  //     x: -100,
+  //     duration: 2,
+  //     ease: "bounce",
+  //     delay: 0.3,
+  //     scrollTrigger: {
+  //       trigger: ".ContactMe-Heading"
+  //     }
+  //   });
+  // }, [comp]);
+   // Scroll animation for Contact Me
 
   useLayoutEffect(() => {
     if (animateBurgerMenu === true) {
@@ -99,12 +416,6 @@ function App() {
           duration: 0.5,
           x: 5000
         }); 
-
-        // tl1.to(".Header-Menu-Button", 
-        // { 
-        //   duration: 0.5,
-        //   x: 500
-        // }); 
         
         gsap.from(".Header-Menu-Hide-Button", 
         { 
@@ -202,11 +513,11 @@ function App() {
         </article>
         <article className="Standart-Section-Container">
         <div className="Portfolio-anchor" id="Portfolio"></div>
-          <h2 className="Standart-Heading">{currentData.mainSection.portfolio.heading}</h2>
+          <h2 className="Standart-Heading Portfolio-Heading">{currentData.mainSection.portfolio.heading}</h2>
           <div className="Standart-Block">
-            <h3 className="Standart-Subheading">{currentData.mainSection.portfolio.projects[0].title}</h3>
+            <h3 className="Standart-Subheading Portfolio-Subheading">{currentData.mainSection.portfolio.projects[0].title}</h3>
             <div className="Projects-Container">
-              <p className="Standart-Description">{currentData.mainSection.portfolio.projects[0].description}</p>
+              <p className="Standart-Description Portfolio-Container" id="Portfolio-Description" >{currentData.mainSection.portfolio.projects[0].description}</p>
               <div className="Project-Link-Extra-Container">
                 <a className="Project-Link" onMouseEnter={() => {setAnimateWebsiteLinkTo(true); setAnimateWebsiteLinkFrom(false)}} onMouseLeave={() => {setAnimateWebsiteLinkFrom(true); setAnimateWebsiteLinkTo(false)}} href={currentData.mainSection.portfolio.projects[0].link}>
                   <p className="Project-Link-Title">{currentData.mainSection.portfolio.projects[0].linkTitle} <ArrowForwardIcon className='Standart-Icon' /></p>
@@ -216,10 +527,10 @@ function App() {
             </div>
           </div>
           <div className="Standart-List-Outer-Container">
-          <h3 className="Standart-Subheading">{currentData.mainSection.portfolio.petProjects.heading}</h3>
+          <h3 className="Standart-Subheading Pet-Projects-Heading">{currentData.mainSection.portfolio.petProjects.heading}</h3>
           <ul className="Standart-List">
             {currentData.mainSection.portfolio.petProjects.projects.map((item) => 
-                      <li key={item.title} className="Standart-List-Container">
+                      <li key={item.title} className="Standart-List-Container Pet-Project-Item">
                           <p><span>{item.title}</span> - [ <span>{item.technologies}</span> ]</p>
                           <a className="Pet-Project-Link" href={item.link} target='blank'>{item.link}</a>
                       </li> 
@@ -230,24 +541,24 @@ function App() {
         </article>
         <article className="Standart-Section-Container">
           <div className="Experience-anchor" id="Experience"></div>
-          <h2 className="Standart-Heading">{currentData.mainSection.experience.heading}</h2>
-          <div className='Standart-Block'>
+          <h2 className="Standart-Heading Experience-Heading" ref={comp}>{currentData.mainSection.experience.heading}</h2>
+          <div className='Standart-Block Experience-Block'>
             <h3 className="Standart-Subheading">{currentData.mainSection.experience.job.title}</h3>
             <p className="Standart-Description">{currentData.mainSection.experience.job.description}</p>
             <p>[ {currentData.mainSection.experience.job.date} ]</p>
           </div>
-          <div className='Standart-Block'>
+          <div className='Standart-Block Experience-Volunteering-Block' ref={comp}>
             <h3 className="Standart-Subheading">{currentData.mainSection.experience.volunteering.title}</h3>
             <h4 className="Standart-Micro-Heading">{currentData.mainSection.experience.volunteering.subTitle}</h4>
             <p className="Standart-Description">{currentData.mainSection.experience.volunteering.description}</p>
             <p>[ {currentData.mainSection.experience.volunteering.date} ]</p>
           </div>
-          <div className='Standart-Block'>
+          <div className='Standart-Block' ref={comp}>
             <div className='Standart-List-Outer-Container'>
-            <h3 className="Standart-Subheading">{currentData.mainSection.experience.courses.title}</h3>
+            <h3 className="Standart-Subheading Courses">{currentData.mainSection.experience.courses.title}</h3>
               <ul className="Standart-List">
               {currentData.mainSection.experience.courses.coursesList.map((item) => 
-                        <li key={item.title} className="Standart-List-Container">
+                        <li key={item.title} className="Standart-List-Container Courses-Item">
                             <p>{item.title}</p>
                             <p>[ {item.date} ]</p>
                         </li> 
@@ -257,10 +568,10 @@ function App() {
           </div>
           <div className="Standart-Block">
             <div className='Standart-List-Outer-Container'>
-              <h3 className="Standart-Subheading">{currentData.mainSection.experience.languages.title}</h3>
+              <h3 className="Standart-Subheading Languages">{currentData.mainSection.experience.languages.title}</h3>
                 <ul className="Standart-List">
                 {currentData.mainSection.experience.languages.languagesList.map((item) => 
-                          <li key={item.title} className="Standart-List-Container">
+                          <li key={item.title} className="Standart-List-Container Languages-Item">
                               <p>{item.title} - {item.level}</p>
                           </li> 
                           )}
@@ -270,24 +581,24 @@ function App() {
         </article>
         <article className="Standart-Section-Container">
           <div className="Skills-anchor" id="Skills"></div>
-          <h2 className="Standart-Heading">{currentData.mainSection.skills.heading}</h2>
+          <h2 className="Standart-Heading Skills-Heading">{currentData.mainSection.skills.heading}</h2>
           <div className="Standart-Block">
             <div className="Skills-Extra-Container">
             <div className="Standart-List-Outer-Container Skills-List-Outer-Container">
-              <h3 className="Standart-Subheading">{currentData.mainSection.skills.hardSkills.title}</h3>
+              <h3 className="Standart-Subheading Hard-Skills-Heading">{currentData.mainSection.skills.hardSkills.title}</h3>
                 <ul className="Standart-List">
                 {currentData.mainSection.skills.hardSkills.skillsList.map((item) => 
-                          <li key={item} className="Standart-List-Container">
+                          <li key={item} className="Standart-List-Container Hard-Skills-Item">
                               <p>{item}</p>
                           </li> 
                           )}
               </ul>
               </div>
               <div className="Standart-List-Outer-Container Skills-List-Outer-Container">
-              <h3 className="Standart-Subheading">{currentData.mainSection.skills.softSkills.title}</h3>
+              <h3 className="Standart-Subheading Soft-Skills-Heading">{currentData.mainSection.skills.softSkills.title}</h3>
                 <ul className="Standart-List">
                 {currentData.mainSection.skills.softSkills.skillsList.map((item) => 
-                          <li key={item} className="Standart-List-Container">
+                          <li key={item} className="Standart-List-Container Hard-Skills-Item">
                               <p>{item}</p>
                           </li> 
                           )}
@@ -298,7 +609,7 @@ function App() {
         </article>
         <article className="Standart-Section-Container">
           <div className="CV-anchor" id="CV"></div>
-          <h2 className="Standart-Heading">{currentData.mainSection.cV.heading}</h2>
+          <h2 className="Standart-Heading CV-Heading">{currentData.mainSection.cV.heading}</h2>
           <div className="Standart-Block CV-Block">
                 <img className="CV-Preview" src={require("./data/img/cv-preview-image.png")} alt="CV preview"></img>
                 <div className="CV-Links-Container">
@@ -309,7 +620,7 @@ function App() {
         </article>
         <article className="Standart-Section-Container ContactMe-Section-Container">
           <div className="ContactMe-anchor" id="ContactMe"></div>
-          <h2 className="Standart-Heading ContactMe-Heading">{currentData.mainSection.contactMe.heading}</h2>
+          <h2 className="Standart-Heading ContactMe-Heading" id='ContactMe-Heading'>{currentData.mainSection.contactMe.heading}</h2>
           <div className="Standart-Block ContactMe-Block">
                <div className="ContactMe-Contacts-Container">
                   <a href={currentData.mainSection.about.phoneNumber} className="Standart-List-Container ContactMe-Link"><LocalPhoneIcon className='Standart-Icon' /> {currentData.mainSection.about.phoneNumberTitle}</a>
@@ -328,7 +639,6 @@ function App() {
         </article>
       </section>
       <footer className="Standart-Section-Container Footer">
-      {/* <img className="Footer-Logo" src={require('./data/img/portfolio-logo.png')} alt="Portfolio logo"></img> */}
       <div className="Footer-Nav-Container">
       <nav className="Footer-Nav">
         {currentData.header.navItems.slice(0,3).map((item) => 

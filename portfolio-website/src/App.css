@@ -851,16 +851,24 @@
   color: var(--second-dark-color);
 }
 
-@media screen and (min-width: 500px){
+
+@media screen and (min-width: 420px){
   .Footer-Nav-Container {
     flex-direction: row;
     gap: 5%;
     min-width: 60%;
     align-items: center;
+    font-size: 80%;
   }
   .Footer-Nav {
     flex-basis: 45%;
     height: 100%;
+  }
+}
+
+@media screen and (min-width: 560px){
+  .Footer-Nav-Container {
+    font-size: 100%;
   }
 }
 
@@ -869,3 +877,14 @@
     padding: 15px 10%;
   }
 }
+
+/* @media screen and (min-width: 420px) {
+  .Footer-Nav-Container {
+    background-color: green;
+    gap: 0;
+  }
+  .Footer-Nav {
+    padding-top: 0;
+  }
+} */
+
