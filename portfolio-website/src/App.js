@@ -476,7 +476,7 @@ function App() {
           </div>
             <div className="Header-Links-Container">
               <a className="Header-Link Header-Animated-Element" href={currentData.header.emailHref}><MailOutlineIcon className='Header-Email-Icon'/></a>
-              <a className="Header-Link Header-Animated-Element" href={currentData.header.linkedInHref}>{currentData.header.linkedIn}</a>
+              <a className="Header-Link Header-Animated-Element" href={currentData.header.linkedInHref} target='blank'>{currentData.header.linkedIn}</a>
             </div>
         </div>
         <div className="Header-Right-Container">
@@ -520,7 +520,7 @@ function App() {
             <div className="Projects-Container">
               <p className="Standart-Description Portfolio-Container" id="Portfolio-Description" >{currentData.mainSection.portfolio.projects[0].description}</p>
               <div className="Project-Link-Extra-Container">
-                <a className="Project-Link" onMouseEnter={() => {setAnimateWebsiteLinkTo(true); setAnimateWebsiteLinkFrom(false)}} onMouseLeave={() => {setAnimateWebsiteLinkFrom(true); setAnimateWebsiteLinkTo(false)}} href={currentData.mainSection.portfolio.projects[0].link}>
+                <a className="Project-Link" onMouseEnter={() => {setAnimateWebsiteLinkTo(true); setAnimateWebsiteLinkFrom(false)}} onMouseLeave={() => {setAnimateWebsiteLinkFrom(true); setAnimateWebsiteLinkTo(false)}} href={currentData.mainSection.portfolio.projects[0].link} target='blank'>
                   <p className="Project-Link-Title">{currentData.mainSection.portfolio.projects[0].linkTitle} <ArrowForwardIcon className='Standart-Icon' /></p>
                   <img src={require("./data/img/ferrometals-preview-image.png")} target="blank" alt="FerroMetals website preview"></img>
                 </a>
@@ -625,9 +625,9 @@ function App() {
           <div className="Standart-Block ContactMe-Block">
                <div className="ContactMe-Contacts-Container">
                   <a href={currentData.mainSection.about.phoneNumber} className="Standart-List-Container ContactMe-Link"><LocalPhoneIcon className='Standart-Icon' /> {currentData.mainSection.about.phoneNumberTitle}</a>
-                  <a href={currentData.header.linkedInHref} className="Standart-List-Container ContactMe-Link"><LinkedInIcon className='Standart-Icon' /> {currentData.header.linkedInHref}</a>
+                  <a href={currentData.header.linkedInHref} target='blank' className="Standart-List-Container ContactMe-Link"><LinkedInIcon className='Standart-Icon' /> {currentData.header.linkedInHref}</a>
                   <a href={currentData.header.emailHref} className="Standart-List-Container ContactMe-Link"><MailOutlineIcon className='Standart-Icon' /> {currentData.header.email}</a>
-                  <a href={currentData.mainSection.contactMe.contactsList.github} className="Standart-List-Container ContactMe-Link"><GitHubIcon className='Standart-Icon' /> {currentData.mainSection.contactMe.contactsList.github}</a>
+                  <a href={currentData.mainSection.contactMe.contactsList.github} target='blank' className="Standart-List-Container ContactMe-Link"><GitHubIcon className='Standart-Icon' /> {currentData.mainSection.contactMe.contactsList.github}</a>
                 </div> 
                <form className="ContactMe-Contact-Form-Container">
                   <h3 className="Standart-Subheading">{currentData.mainSection.contactMe.contactForm.title}</h3>
@@ -656,8 +656,8 @@ function App() {
         <p className="Footer-Text"><LocationOnIcon className='Standart-Icon' />{currentData.mainSection.about.location}</p>
         <a className="Footer-Contact-Link" href={currentData.mainSection.about.phoneNumber}><LocalPhoneIcon className='Standart-Icon' />{currentData.footer.contacts.phone}</a>
         <a className="Footer-Contact-Link" href={`mailto:${currentData.header.email}`}><MailOutlineIcon className='Standart-Icon' />{currentData.footer.contacts.email}</a>
-        <a href={currentData.header.linkedInHref} className="Footer-Contact-Link"><LinkedInIcon className='Standart-Icon' /> {currentData.footer.contacts.linkedIn}</a>
-        <a href={currentData.mainSection.contactMe.contactsList.github} className="Footer-Contact-Link"><GitHubIcon className='Standart-Icon' /> {currentData.footer.contacts.github}</a>
+        <a href={currentData.header.linkedInHref} target='blank' className="Footer-Contact-Link"><LinkedInIcon className='Standart-Icon' /> {currentData.footer.contacts.linkedIn}</a>
+        <a href={currentData.mainSection.contactMe.contactsList.github} target='blank' className="Footer-Contact-Link"><GitHubIcon className='Standart-Icon' /> {currentData.footer.contacts.github}</a>
       </div>
       </footer>
     </div>
