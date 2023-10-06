@@ -340,16 +340,6 @@ function App() {
         }
       });
 
-      gsap.from(".Soft-Skills-Item", {
-        x: 300,
-        duration: 1,
-        delay: 0.5,
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: ".Soft-Skills-Item"
-        }
-      });
-
       gsap.from(".ContactMe-Link", {
         x: 400,
         duration: 1,
