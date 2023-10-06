@@ -5,7 +5,7 @@ const dataEn = {
         linkedInHref: "https://www.linkedin.com/in/iryna-smyrnova-74461a261/",
         email: "iryna.smyrnova12@gmail.com",
         emailHref: "mailto:iryna.smyrnova12@gmail.com",
-        navItems: ["About me", "Portfolio", "Experience", "Skills", "CV", "Contact me"],
+        navItems: ["About", "Portfolio", "Experience", "Skills", "CV", "Contacts"],
 
     },
     mainSection: {

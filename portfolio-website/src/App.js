@@ -497,6 +497,7 @@ function App() {
         </nav>
       <section className="Main-Section">
         <article className="About">
+        <div className="About-anchor" id="About"></div>
           <div className="About-Top-Container">
               <div className="About-Sidebar">
                 <img src={require('./data/img/app-photo.jpg')} alt="Foto"></img>
@@ -619,7 +620,7 @@ function App() {
           </div>
         </article>
         <article className="Standart-Section-Container ContactMe-Section-Container">
-          <div className="ContactMe-anchor" id="ContactMe"></div>
+          <div className="Contacts-anchor" id="Contacts"></div>
           <h2 className="Standart-Heading ContactMe-Heading" id='ContactMe-Heading'>{currentData.mainSection.contactMe.heading}</h2>
           <div className="Standart-Block ContactMe-Block">
                <div className="ContactMe-Contacts-Container">

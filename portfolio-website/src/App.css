@@ -340,12 +340,23 @@
   position: relative;
 }
 
-.Portfolio-anchor, .Experience-anchor, .Skills-anchor, .CV-anchor, .ContactMe-anchor {
+.About {
+  position: relative;
+}
+
+.Portfolio-anchor, .Experience-anchor, .Skills-anchor, .CV-anchor, .Contacts-anchor {
   position: absolute;
   width: 1px;
   height: 1px;
-  top: -40px
+  top: -80px
   /* top: -60px */
+}
+
+.About-anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 0
 }
 
 /* #Portfolio:target { scroll-margin-top: 60px; } */
@@ -866,7 +877,7 @@
   }
 }
 
-@media screen and (min-width: 560px){
+@media screen and (min-width: 500px){
   .Footer-Nav-Container {
     font-size: 100%;
   }
