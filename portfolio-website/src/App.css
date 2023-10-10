@@ -53,8 +53,10 @@
   --main-dark-color: #8B7B8B;
   --second-dark-color: #363636;
   --main-page-color: #F8F8FF;
-  --first-details-color: purple;
-  --second-details-color: violet;
+  --first-details-color: #800080;
+  /* --first-details-color: purple; */
+  --second-details-color: #EE82EE;
+  /* --second-details-color: violet; */
   --third-details-color: #CDB5CD
 } 
 

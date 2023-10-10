@@ -24,24 +24,24 @@ const dataUkr = {
                     title: "Вебсайт компанії UAB «FerroMetals»",
                     description: `Поки без перекладу№2`,
                     link: "https://ferrometals.netlify.app/",
-                    linkTitle: "На сайт"
+                    linkTitle: "Відвідати сайт"
                 }
             ],
             petProjects: {
-                heading: "Pet projects",
+                heading: "Пет проєкти",
                 projects: [
                     {
-                        title: "Portfolio",
+                        title: "Портфоліо",
                         technologies: "React, GSAP",
                         link: "https://github.com/smyrnova-iryna/portfolio"
                     },
                     {
-                        title: "Contact-us form",
+                        title: "Форма зворотнього зв'язку",
                         technologies: "React, Styled components",
                         link: "https://github.com/smyrnova-iryna/contact-us-form"
                     },
                     {
-                        title: "Furniture company website template",
+                        title: "Шаблон вебсайту меблевої компанії",
                         technologies: "HTML, CSS",
                         link: "https://github.com/smyrnova-iryna/furniture"
                     }
@@ -49,89 +49,87 @@ const dataUkr = {
             }
         },
         experience: {
-            heading: "Experience",
+            heading: "Досвід роботи",
             job: {
-                title: "React Developer in UAB «FerroMetals»",
-                description: `I  am responsible for developing and designing of the company's 
-                corporate website (in the activity "Woodworking machines production 
-                and sale")`,
-                date: "02.2023 - up to now"
+                title: "React розробниця в UAB «FerroMetals»",
+                description: `Поки без перекладу`,
+                date: "02.2023 - до сьогодні"
             },
             volunteering: {
-                title: "Volunteering",
-                subTitle: "HTML/CSS mentor in CodeClub",
-                description: `As a volunteer mentor in the charitable organization "The Charitable Foundation "Покоління.ЮЕЙ"" was responsible for teaching HTML/CSS course for students in the age group of 12-15 years, including the preparation and presentation of lectures, preparation and checking of homeworks.`,
+                title: "Волонтерство",
+                subTitle: "HTML/CSS менторка у CodeClub",
+                description: `Поки без перекладу`,
                 date: "04.2023 - 06.2023"
             },
             courses: {
-                title: "Courses",
+                title: "Курси",
                 coursesList: [
                     {
-                        title: "React Online Marathon in Softserve IT Academy",
+                        title: "React Online Marathon у Softserve IT Academy",
                         date: "10.2022 - 12.2022"
                     },
                     {
-                        title: "HTML5/CSS3/JavaScript Fundamentals course in Softserve IT Academy",
+                        title: "HTML5/CSS3/JavaScript Fundamentals курс у Softserve IT Academy",
                         date: "09.2022 - 10.2022"
                     },
                     {
-                        title: "Python Pro in Hillel IT School",
+                        title: "Python Pro курс у Hillel IT School",
                         date: "02.2022 - 06.2022"
                     },
                     {
-                        title: "Python Introduction in Hillel IT School ",
+                        title: "Python Introduction курс у Hillel IT School ",
                         date: "10.2021 - 01.2022"
                     }
                 ]
             },
             languages: {
-                title: "Languages",
+                title: "Мови",
                 languagesList: [
                     {
-                        title: "Ukrainian",
-                        level: "Native"
+                        title: "Українська",
+                        level: "Носій"
                     },
                     {
-                        title: "English",
+                        title: "Англійська",
                         level: "B2"
                     }
                 ]
             }
         },
         skills: {
-            heading: "Skills",
+            heading: "Навички",
             hardSkills: {
-                title: "Hard skills",
+                title: "Жорсткі навички",
                 skillsList: ["HTML", "CSS", "JavaScript", "React", "Styled components", "MUI", "GSAP", "Git"]
             },
             softSkills: {
-                title: "Soft skills",
-                skillsList: ["Teamwork", " Time management", "Critical thinking", "Communication", "Creativity", "Learnability", "Attention to details"]
+                title: "М'які навички",
+                skillsList: ["Командна робота", "Управління часом", "Критичне мислення", "Комунікабельність", "Креативність", "Здібність до навчання", "Увага до деталей"]
             }
         },
         cV:  {
-            heading: "CV",
-            download: "Download",
-            view: "View"
+            heading: "Резюме",
+            download: "Завантажити",
+            view: "Переглянути"
         },
         contactMe: {
-            heading: "Contact me",
+            heading: "Контакти",
             contactsList: {
                 github: "https://github.com/smyrnova-iryna"
             },
             contactForm: {
-                title: "Contact me",
-                name: "Name",
-                subject: "Message",
-                contactInformation: "Contact information",
-                submitText: "Send"
+                title: "Зв'язатись зі мною",
+                name: "Ім'я",
+                subject: "Повідомлення",
+                contactInformation: "Контактна інформація",
+                submitText: "Надіслати"
             }
         }
     },
     footer: {
         contacts: {
-            phone: "Call",
-            email: "Email",
+            phone: "Дзвінок",
+            email: "Електронна пошта",
             linkedIn: "LinkedIn",
             github: "Github"
         }
