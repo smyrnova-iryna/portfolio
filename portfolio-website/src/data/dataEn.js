@@ -12,12 +12,11 @@ const dataEn = {
         about: {
             name: "IRYNA SMYRNOVA",
             position: "JUNIOR FRONT-END DEVELOPER",
-            description: `I  have practical experience of implementing projects on React according 
-            to the principles of responsive web design. I have confirmation of main 
-            hard skills (React, JavaScript, CSS, HTML) on my LinkedIn profile according 
-            to the results of relevant tests. Since February 2023 I have been 
-            developing corporate website of the Lithuanian company UAB 
-            «FerroMetals».`,
+            description: `I offer high-quality site development that complies the principles of cross-browser
+             compatibility and adaptive design. Layout can be done according to a ready-made layout design, 
+             or according to the whishes given regarding the design and structure of the site and the materials
+              avaliable. If necessary, the site pages can place elements of vector graphics and animation. Examples
+               of my projects can be found more detailed in the Portfolio section.`,
             phoneNumber: "tel:+380676461393",
             phoneNumberTitle: "+38(067)646-13-93",
             location: "Lviv, Ukraine"
@@ -27,12 +26,7 @@ const dataEn = {
             projects: [
                 {
                     title: "UAB «FerroMetals» company`s website",
-                    description: `I  have practical experience of implementing projects on React according 
-                    to the principles of responsive web design. I have confirmation of main 
-                    hard skills (React, JavaScript, CSS, HTML) on my LinkedIn profile according 
-                    to the results of relevant tests. Since February 2023 I have been 
-                    developing corporate website of the Lithuanian company UAB 
-                    «FerroMetals».`,
+                    description: 'The development of UAB "Ferrometals" company`s website included the formation of the website structure (header, footer, navigation panel and web pages), the implementation of the mechanism of instant changing language without reloading the site, the implementation of the callback request function and the contact form. A feature of the project is the work with complicated graphic design, presented in the desktop version of the site, which included in-depth work with svg (the adaptive version of the site retains the initial aspect ratios of geometric shapes and degree measures of angles even with dynamic changes in screen size).',
                     link: "https://ferrometals.netlify.app/",
                     linkTitle: "Go to site"
                 }
