@@ -601,6 +601,7 @@
   width: 72px;
   text-decoration: none;
   justify-content: center;
+  font-size: 87%;
 }
 
 @media screen and (min-width: 420px) {
