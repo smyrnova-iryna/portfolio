@@ -12,7 +12,7 @@ const dataEn = {
         about: {
             name: "IRYNA SMYRNOVA",
             position: "FRONTEND DEVELOPER",
-            description: `I offer high-quality site development that complies the principles of cross-browser
+            description: `I offer high-quality site development that complies principles of cross-browser
              compatibility and adaptive design. Layout can be done according to a ready-made layout design 
              or according to the whishes given regarding the design and structure of the site and the materials
               avaliable. If necessary the site pages can place elements of vector graphics and animation. Examples
@@ -26,7 +26,7 @@ const dataEn = {
             projects: [
                 {
                     title: "UAB «FerroMetals» company`s website",
-                    description: 'The development of UAB "Ferrometals" company`s website included the formation of the website structure (header, footer, navigation panel and web pages), the implementation of the mechanism of instant changing language without reloading the site, the implementation of the callback request function and the contact form. A feature of the project is the work with complicated graphic design, presented in the desktop version of the site, which included in-depth work with svg (the adaptive version of the site retains the initial aspect ratios of geometric shapes and degree measures of angles even with dynamic changes in screen size).',
+                    description: 'Development of UAB "Ferrometals" company`s website included formation of the website structure (header, footer, navigation panel and web pages), implementation of mechanism of instant changing language without reloading the site, implementation of callback request function and contact form. A feature of the project is work with complicated graphic design, presented in the desktop version of the site, which included in-depth work with SVG (adaptive version of the site retains the initial aspect ratios of geometric shapes and degree measures of angles even with dynamic changes in screen size).',
                     link: "https://ferrometals.netlify.app/",
                     linkTitle: "Go to site"
                 }
@@ -55,7 +55,7 @@ const dataEn = {
         experience: {
             heading: "Experience",
             job: {
-                title: "React Developer in UAB «FerroMetals»",
+                title: "React developer in UAB «FerroMetals»",
                 description: `I  am responsible for developing of the company's 
                 corporate website (in the activity "Woodworking machines production 
                 and sale")`,
@@ -64,7 +64,7 @@ const dataEn = {
             volunteering: {
                 title: "Volunteering",
                 subTitle: "HTML/CSS mentor in CodeClub",
-                description: `As a volunteer mentor in the charitable organization "The Charitable Foundation "Покоління.ЮЕЙ"" was responsible for teaching HTML/CSS course for students in the age group of 12-15 years, including the preparation and presentation of lectures, preparation and checking of homeworks.`,
+                description: `As a volunteer mentor in the charitable organization "The Charitable Foundation "Покоління.ЮЕЙ"" I was responsible for teaching HTML/CSS course for students in the age group of 12-15 years including preparation and presentation of lectures, preparation and checking of homeworks.`,
                 date: "04.2023 - 06.2023"
             },
             courses: {
