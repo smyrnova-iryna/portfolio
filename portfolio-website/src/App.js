@@ -472,7 +472,7 @@ function App() {
         <div className="Header-Right-Container">
             <nav className="Desctop-Nav">
                 {currentData.header.navItems.slice(1,6).map((item) => 
-                    <a className="Nav-Desctop-Link" href={`#${item}`} key={item}>{item}</a> 
+                    <a className="Nav-Desctop-Link" href={`#${item[0]}`} key={item[1]}>{item[1]}</a> 
                     )}
             </nav>
             <MenuIcon style={{display: `${menuDisplay}`}} className="Header-Menu-Button Header-Animated-Element" onClick={() => {setMenuDisplay("none"); setNavVisibility("Visible-Nav"); setAnimateBurgerMenu(true); setcloseIconDisplay("block")}}/>
@@ -482,7 +482,7 @@ function App() {
         </header>
         <nav className={`Nav ${navVisibility}`}>
             {currentData.header.navItems.map((item) => 
-                 <a onClick={() => {setMenuDisplay("block"); setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} className="Nav-Link" href={`#${item}`} key={item}>{item}</a> 
+                 <a onClick={() => {setMenuDisplay("block"); setAnimateBurgerMenu("reverse"); setNavVisibility(""); setcloseIconDisplay("none")}} className="Nav-Link" href={`#${item[0]}`} key={item[1]}>{item[1]}</a> 
                 )}
         </nav>
       <section className="Main-Section">
@@ -633,12 +633,12 @@ function App() {
       <div className="Footer-Nav-Container">
       <nav className="Footer-Nav">
         {currentData.header.navItems.slice(0,3).map((item) => 
-          <a className="Footer-Link" href={`#${item}`} key={item}>{item}</a> 
+          <a className="Footer-Link" href={`#${item[0]}`} key={item[1]}>{item[1]}</a> 
         )}
       </nav>
       <nav className="Footer-Nav">
         {currentData.header.navItems.slice(3,6).map((item) => 
-          <a className="Footer-Link" href={`#${item}`} key={item}>{item}</a> 
+          <a className="Footer-Link" href={`#${item[0]}`} key={item[1]}>{item[1]}</a> 
         )}
       </nav>
       </div>

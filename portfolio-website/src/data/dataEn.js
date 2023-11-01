@@ -5,17 +5,17 @@ const dataEn = {
         linkedInHref: "https://www.linkedin.com/in/iryna-smyrnova-74461a261/",
         email: "iryna.smyrnova12@gmail.com",
         emailHref: "mailto:iryna.smyrnova12@gmail.com",
-        navItems: ["About", "Portfolio", "Experience", "Skills", "CV", "Contacts"],
+        navItems: [["About", "About"], ["Portfolio", "Portfolio"], ["Experience", "Experience"], ["Skills", "Skills"], ["CV", "CV"], ["Contacts", "Contacts"]],
 
     },
     mainSection: {
         about: {
             name: "IRYNA SMYRNOVA",
-            position: "JUNIOR FRONT-END DEVELOPER",
+            position: "FRONTEND DEVELOPER",
             description: `I offer high-quality site development that complies the principles of cross-browser
-             compatibility and adaptive design. Layout can be done according to a ready-made layout design, 
+             compatibility and adaptive design. Layout can be done according to a ready-made layout design 
              or according to the whishes given regarding the design and structure of the site and the materials
-              avaliable. If necessary, the site pages can place elements of vector graphics and animation. Examples
+              avaliable. If necessary the site pages can place elements of vector graphics and animation. Examples
                of my projects can be found more detailed in the Portfolio section.`,
             phoneNumber: "tel:+380676461393",
             phoneNumberTitle: "+38(067)646-13-93",
@@ -56,7 +56,7 @@ const dataEn = {
             heading: "Experience",
             job: {
                 title: "React Developer in UAB «FerroMetals»",
-                description: `I  am responsible for developing and designing of the company's 
+                description: `I  am responsible for developing of the company's 
                 corporate website (in the activity "Woodworking machines production 
                 and sale")`,
                 date: "02.2023 - up to now"
