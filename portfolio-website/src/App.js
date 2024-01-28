@@ -34,6 +34,10 @@ function App() {
 
   const [animateWebsiteLinkFrom, setAnimateWebsiteLinkFrom] = useState(false);
 
+  const [animateSecondWebsiteLinkTo, setAnimateSecondWebsiteLinkTo] = useState(false);
+
+  const [animateSecondWebsiteLinkFrom, setAnimateSecondWebsiteLinkFrom] = useState(false);
+
   const [navVisibility, setNavVisibility] = useState("");
 
   const [closeIconDisplay, setcloseIconDisplay] = useState("none");
@@ -427,7 +431,7 @@ function App() {
     if (animateWebsiteLinkTo === true) {
       let ctxTo = gsap.context(() => {
 
-        gsap.to(".Project-Link", 
+        gsap.to(".First-Project-Link", 
         { 
           duration: 1,
           scale: 1.1
@@ -440,7 +444,7 @@ function App() {
     } else if (animateWebsiteLinkFrom === true) {
       let ctxFrom = gsap.context(() => {
 
-        gsap.from(".Project-Link", 
+        gsap.from(".First-Project-Link", 
         { 
           duration: 1,
           scale: 1.1
@@ -453,6 +457,38 @@ function App() {
     }
     
   }, [animateWebsiteLinkTo, animateWebsiteLinkFrom]);
+  
+
+  useLayoutEffect(() => {
+    if (animateSecondWebsiteLinkTo === true) {
+      let ctxTo = gsap.context(() => {
+
+        gsap.to(".Second-Project-Link", 
+        { 
+          duration: 1,
+          scale: 1.1
+        }); 
+
+      }, comp); 
+
+      return () => ctxTo.revert(); 
+
+    } else if (animateSecondWebsiteLinkFrom === true) {
+      let ctxFrom = gsap.context(() => {
+
+        gsap.from(".Second-Project-Link", 
+        { 
+          duration: 1,
+          scale: 1.1
+        }); 
+
+      }, comp); 
+
+      return () => ctxFrom.revert(); 
+
+    }
+    
+  }, [animateSecondWebsiteLinkTo, animateSecondWebsiteLinkFrom]);
   
 
 
@@ -510,14 +546,26 @@ function App() {
             <div className="Projects-Container">
               <p className="Standart-Description Portfolio-Container" id="Portfolio-Description" >{currentData.mainSection.portfolio.projects[0].description}</p>
               <div className="Project-Link-Extra-Container">
-                <a className="Project-Link" onMouseEnter={() => {setAnimateWebsiteLinkTo(true); setAnimateWebsiteLinkFrom(false)}} onMouseLeave={() => {setAnimateWebsiteLinkFrom(true); setAnimateWebsiteLinkTo(false)}} href={currentData.mainSection.portfolio.projects[0].link} target='blank'>
+                <a className="Project-Link First-Project-Link" onMouseEnter={() => {setAnimateWebsiteLinkTo(true); setAnimateWebsiteLinkFrom(false)}} onMouseLeave={() => {setAnimateWebsiteLinkFrom(true); setAnimateWebsiteLinkTo(false)}} href={currentData.mainSection.portfolio.projects[0].link} target='blank'>
                   <p className="Project-Link-Title">{currentData.mainSection.portfolio.projects[0].linkTitle} <ArrowForwardIcon className='Standart-Icon' /></p>
                   <img src={require("./data/img/ferrometals-preview-image.png")} target="blank" alt="FerroMetals website preview"></img>
                 </a>
               </div>
             </div>
           </div>
-          <div className="Standart-List-Outer-Container">
+          <div className="Standart-Block">
+            <h3 className="Standart-Subheading Portfolio-Subheading">{currentData.mainSection.portfolio.projects[1].title}</h3>
+            <div className="Projects-Container">
+              <p className="Standart-Description Portfolio-Container" id="Portfolio-Description" >{currentData.mainSection.portfolio.projects[1].description}</p>
+              <div className="Project-Link-Extra-Container">
+                <a className="Project-Link Second-Project-Link" onMouseEnter={() => {setAnimateSecondWebsiteLinkTo(true); setAnimateSecondWebsiteLinkFrom(false)}} onMouseLeave={() => {setAnimateSecondWebsiteLinkFrom(true); setAnimateSecondWebsiteLinkTo(false)}} href={currentData.mainSection.portfolio.projects[1].link} target='blank'>
+                  <p className="Project-Link-Title">{currentData.mainSection.portfolio.projects[1].linkTitle} <ArrowForwardIcon className='Standart-Icon' /></p>
+                  <img src={require("./data/img/houserent-preview-image.png")} target="blank" alt="FerroMetals website preview"></img>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* <div className="Standart-List-Outer-Container">
           <h3 className="Standart-Subheading Pet-Projects-Heading">{currentData.mainSection.portfolio.petProjects.heading}</h3>
           <ul className="Standart-List">
             {currentData.mainSection.portfolio.petProjects.projects.map((item) => 
@@ -528,7 +576,7 @@ function App() {
                       )}
           </ul>
 
-          </div>
+          </div> */}
         </article>
         <article className="Standart-Section-Container">
           <div className="Experience-anchor" id="Experience"></div>

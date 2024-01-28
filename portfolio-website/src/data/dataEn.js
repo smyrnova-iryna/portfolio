@@ -29,6 +29,12 @@ const dataEn = {
                     description: 'Development of UAB "Ferrometals" company`s website included formation of the website structure (header, footer, navigation panel and web pages), implementation of mechanism of instant changing language without reloading the site, implementation of callback request function and contact form. A feature of the project is work with complicated graphic design, presented in the desktop version of the site, which included in-depth work with SVG (adaptive version of the site retains the initial aspect ratios of geometric shapes and degree measures of angles even with dynamic changes in screen size).',
                     link: "https://ferrometals.netlify.app/",
                     linkTitle: "Go to site"
+                },
+                {
+                    title: "Website for Individual Entrepreneur Kyryllova T.V.",
+                    description: "The project represents multipage website for renting offices in Dnipro city, Ukraine. It's structure contains main page with common information and details pages. The website also includes animation implemented using GSAP technology (glowing windows on the house icons, tickers in the details description etc).",
+                    link: "https://smyrnova-iryna.github.io/HouseRent/",
+                    linkTitle: "Go to site (development in progress)"
                 }
             ],
             petProjects: {
