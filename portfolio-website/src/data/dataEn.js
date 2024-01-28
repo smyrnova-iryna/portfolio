@@ -60,13 +60,19 @@ const dataEn = {
         },
         experience: {
             heading: "Experience",
-            job: {
+            job: [{
                 title: "React developer in UAB «FerroMetals»",
-                description: `I  am responsible for developing of the company's 
+                description: `I was responsible for developing of the company's 
                 corporate website (in the activity "Woodworking machines production 
-                and sale")`,
+                and sale").`,
                 date: "02.2023 - up to now"
             },
+            {
+                title: "React Developer in Individual Entrepreneur Kyryllova T.V.",
+                description: `I was responsible for developing the website for renting offices in Dnipro city, Ukraine.`,
+                date: "01.2024 - up to now"
+            },
+        ],
             volunteering: {
                 title: "Volunteering",
                 subTitle: "HTML/CSS mentor in CodeClub",

@@ -582,9 +582,14 @@ function App() {
           <div className="Experience-anchor" id="Experience"></div>
           <h2 className="Standart-Heading Experience-Heading" ref={comp}>{currentData.mainSection.experience.heading}</h2>
           <div className='Standart-Block Experience-Block'>
-            <h3 className="Standart-Subheading">{currentData.mainSection.experience.job.title}</h3>
-            <p className="Standart-Description">{currentData.mainSection.experience.job.description}</p>
-            <p>[ {currentData.mainSection.experience.job.date} ]</p>
+            <h3 className="Standart-Subheading">{currentData.mainSection.experience.job[0].title}</h3>
+            <p className="Standart-Description">{currentData.mainSection.experience.job[0].description}</p>
+            <p>[ {currentData.mainSection.experience.job[0].date} ]</p>
+          </div>
+          <div className='Standart-Block Experience-Block'>
+            <h3 className="Standart-Subheading">{currentData.mainSection.experience.job[1].title}</h3>
+            <p className="Standart-Description">{currentData.mainSection.experience.job[1].description}</p>
+            <p>[ {currentData.mainSection.experience.job[1].date} ]</p>
           </div>
           <div className='Standart-Block Experience-Volunteering-Block' ref={comp}>
             <h3 className="Standart-Subheading">{currentData.mainSection.experience.volunteering.title}</h3>
