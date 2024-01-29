@@ -32,7 +32,7 @@ const dataEn = {
                 },
                 {
                     title: "Website for Individual Entrepreneur Kyryllova T.V.",
-                    description: "The project represents multipage website for renting offices in Dnipro city, Ukraine. It's structure contains main page with common information and details pages. The website also includes animation implemented using GSAP technology (glowing windows on the house icons, tickers in the details description etc).",
+                    description: "The project represents multipage website for renting offices in Dnipro city, Ukraine. Its structure contains main page with common information and details pages. The website also includes animation implemented using GSAP technology.",
                     link: "https://smyrnova-iryna.github.io/HouseRent/",
                     linkTitle: "Go to site (development in progress)"
                 }
@@ -69,7 +69,7 @@ const dataEn = {
             },
             {
                 title: "React Developer in Individual Entrepreneur Kyryllova T.V.",
-                description: `I was responsible for developing the website for renting offices in Dnipro city, Ukraine.`,
+                description: `I was responsible for developing of the website for renting offices in Dnipro city, Ukraine.`,
                 date: "01.2024 - up to now"
             },
         ],

@@ -672,8 +672,9 @@ function App() {
                   <a href={currentData.header.emailHref} className="Standart-List-Container ContactMe-Link"><MailOutlineIcon className='Standart-Icon' /> {currentData.header.email}</a>
                   <a href={currentData.mainSection.contactMe.contactsList.github} target='blank' className="Standart-List-Container ContactMe-Link"><GitHubIcon className='Standart-Icon' /> {currentData.mainSection.contactMe.contactsList.github}</a>
                 </div> 
-               <form className="ContactMe-Contact-Form-Container" id="contactform" action="https://formsubmit.io/send/put your email here" method="POST">
+               <form className="ContactMe-Contact-Form-Container" id="contactform" action="https://formsubmit.io/send/eac64596-98d2-4f48-a08d-515ae0ce4dbb" method="POST">
                   <h3 className="Standart-Subheading">{currentData.mainSection.contactMe.contactForm.title}</h3>
+                  <input name="_redirect" type="hidden" id="name" value="https://smyrnova-iryna.github.io/portfolio/"></input>
                   <input name="name" type="text" id="name" style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" required placeholder={currentData.mainSection.contactMe.contactForm.name}></input>
                   <input name="message" type="text" id="message" style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" required placeholder={currentData.mainSection.contactMe.contactForm.subject}></input>
                   <input name="contactInfo" type="text" id="contactInfo" style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" placeholder={currentData.mainSection.contactMe.contactForm.contactInformation}></input>
