@@ -672,12 +672,13 @@ function App() {
                   <a href={currentData.header.emailHref} className="Standart-List-Container ContactMe-Link"><MailOutlineIcon className='Standart-Icon' /> {currentData.header.email}</a>
                   <a href={currentData.mainSection.contactMe.contactsList.github} target='blank' className="Standart-List-Container ContactMe-Link"><GitHubIcon className='Standart-Icon' /> {currentData.mainSection.contactMe.contactsList.github}</a>
                 </div> 
-               <form className="ContactMe-Contact-Form-Container">
+               <form className="ContactMe-Contact-Form-Container" id="contactform" action="https://formsubmit.io/send/put your email here" method="POST">
                   <h3 className="Standart-Subheading">{currentData.mainSection.contactMe.contactForm.title}</h3>
-                  <input style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" required placeholder={currentData.mainSection.contactMe.contactForm.name}></input>
-                  <input style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" required placeholder={currentData.mainSection.contactMe.contactForm.subject}></input>
-                  <input style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" placeholder={currentData.mainSection.contactMe.contactForm.contactInformation}></input>
-                  <button className="Project-Link-Title ContactMe-Button">{currentData.mainSection.contactMe.contactForm.submitText}<ArrowForwardIosIcon className='Standart-Icon' /></button>
+                  <input name="name" type="text" id="name" style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" required placeholder={currentData.mainSection.contactMe.contactForm.name}></input>
+                  <input name="message" type="text" id="message" style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" required placeholder={currentData.mainSection.contactMe.contactForm.subject}></input>
+                  <input name="contactInfo" type="text" id="contactInfo" style={{backgroundColor: "#F8F8FF", color: "purple"}} className="ContactMe-Input" placeholder={currentData.mainSection.contactMe.contactForm.contactInformation}></input>
+                  <input name="_formsubmit_id" type="text" style={{display: "none"}}></input>
+                  <button className="Project-Link-Title ContactMe-Button" value="Submit" type="submit">{currentData.mainSection.contactMe.contactForm.submitText}<ArrowForwardIosIcon className='Standart-Icon' /></button>
                </form>
           </div>
         </article>
