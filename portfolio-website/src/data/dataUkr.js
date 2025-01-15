@@ -37,42 +37,27 @@ const dataUkr = {
                     title: "Вебсайт для ФОП Кириллова Т.В.",
                     description: "Проєкт являє собою мультисторінковий вебсайт для оренди офісів у місті Дніпро. Структура вебсайту включає головну сторінку з основною інформацією та сторінки з детальнішим описом. Вебсайт також містить елементи анімації, впроваджені з використанням технології GSAP. ",
                     link: "https://smyrnova-iryna.github.io/HouseRent/",
-                    linkTitle: "Відвідати сайт (в розробці)"
+                    linkTitle: "Відвідати сайт"
                 }
-            ],
-            petProjects: {
-                heading: "Пет проєкти",
-                projects: [
-                    {
-                        title: "Портфоліо",
-                        technologies: "React, GSAP",
-                        link: "https://github.com/smyrnova-iryna/portfolio"
-                    },
-                    {
-                        title: "Форма зворотнього зв'язку",
-                        technologies: "React, Styled components",
-                        link: "https://github.com/smyrnova-iryna/contact-us-form"
-                    },
-                    {
-                        title: "Шаблон вебсайту меблевої компанії",
-                        technologies: "HTML, CSS",
-                        link: "https://github.com/smyrnova-iryna/furniture"
-                    }
-                ]
-            }
+            ]
         },
         experience: {
             heading: "Досвід роботи",
             job: [
                 {
-                    title: "React developer в UAB «FerroMetals»",
-                    description: `Відповідала за розробку корпоративного вебсайту компанії (за напрямком "Виробництво і продаж деревообробних верстатів").`, 
-                    date: "02.2023 - до сьогодні"
+                    title: "Front-end Developer у AdversterX",
+                    description: `На посаді Front-end Developer в AdversterX я відповідала за розробку landing page та багатосторінкових вебсайтів різної складності на основі макетів Figma, а також вносила зміни в існуючі проекти компанії з використанням таких технологій: Gulp, Pug, SCSS, VanillaJS. Окрім того, мала досвід виправлення багів інших розробників. За час роботи я реалізувала 63 повноцінні вебсайти.`,
+                    date: "09.2024 - up to now"
                 },
                 {
                     title: "React Developer у ФОП Кириллова Т.В.",
                     description: `Відповідала за розробку вебсайту для оренди житла у місті Дніпро.`,
                     date: "01.2024 - до сьогодні"
+                },
+                {
+                    title: "React developer в UAB «FerroMetals»",
+                    description: `Відповідала за розробку корпоративного вебсайту компанії (за напрямком "Виробництво і продаж деревообробних верстатів").`, 
+                    date: "02.2023 - 09.2024"
                 },
             ], 
             volunteering: {
@@ -120,7 +105,7 @@ const dataUkr = {
             heading: "Навички",
             hardSkills: {
                 title: "Хард скілс",
-                skillsList: ["HTML", "CSS", "JavaScript", "React", "Styled components", "MUI", "GSAP", "Git"]
+                skillsList: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Sass", "Tailwind CSS",  "Styled components", "MUI", "GSAP", "Git"]
             },
             softSkills: {
                 title: "Софт скілс",

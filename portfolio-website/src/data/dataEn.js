@@ -34,44 +34,30 @@ const dataEn = {
                     title: "Website for Individual Entrepreneur Kyryllova T.V.",
                     description: "The project represents multipage website for renting offices in Dnipro city, Ukraine. Its structure contains main page with common information and details pages. The website also includes animation implemented using GSAP technology.",
                     link: "https://smyrnova-iryna.github.io/HouseRent/",
-                    linkTitle: "Go to site (development in progress)"
+                    linkTitle: "Go to site"
                 }
             ],
-            petProjects: {
-                heading: "Pet projects",
-                projects: [
-                    {
-                        title: "Portfolio",
-                        technologies: "React, GSAP",
-                        link: "https://github.com/smyrnova-iryna/portfolio"
-                    },
-                    {
-                        title: "Contact-us form",
-                        technologies: "React, Styled components",
-                        link: "https://github.com/smyrnova-iryna/contact-us-form"
-                    },
-                    {
-                        title: "Furniture company website template",
-                        technologies: "HTML, CSS",
-                        link: "https://github.com/smyrnova-iryna/furniture"
-                    }
-                ]
-            }
         },
         experience: {
             heading: "Experience",
-            job: [{
-                title: "React developer in UAB «FerroMetals»",
-                description: `I was responsible for developing of the company's 
-                corporate website (in the activity "Woodworking machines production 
-                and sale").`,
-                date: "02.2023 - up to now"
-            },
-            {
-                title: "React Developer in Individual Entrepreneur Kyryllova T.V.",
-                description: `I was responsible for developing of the website for renting offices in Dnipro city, Ukraine.`,
-                date: "01.2024 - up to now"
-            },
+            job: [
+                {
+                    title: "Front-end Developer at AdversterX",
+                    description: `As front-end developer at AdversterX, I was responsible for implementation of landing pages and multi-page websites of varying complexity based on Figma layouts, as well as making changes to the company's existing projects using the following technologies: Gulp, Pug, SCSS, VanillaJS. In addition, I had experience in fixing bugs of other developers. During my tenure, I implemented 63 fully-fledged websites.`,
+                    date: "09.2024 - up to now"
+                },
+                {
+                    title: "React Developer at Individual Entrepreneur Kyryllova T.V.",
+                    description: `I was responsible for developing of the website for renting offices in Dnipro city, Ukraine.`,
+                    date: "01.2024 - up to now"
+                },
+                {
+                    title: "React developer at UAB «FerroMetals»",
+                    description: `I was responsible for developing of the company's 
+                    corporate website (in the activity "Woodworking machines production 
+                    and sale").`,
+                    date: "02.2023 - 09.2024"
+                }
         ],
             volunteering: {
                 title: "Volunteering",
@@ -118,7 +104,7 @@ const dataEn = {
             heading: "Skills",
             hardSkills: {
                 title: "Hard skills",
-                skillsList: ["HTML", "CSS", "JavaScript", "React", "Styled components", "MUI", "GSAP", "Git"]
+                skillsList: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Sass", "Tailwind CSS", "Styled components", "MUI", "GSAP", "Git"]
             },
             softSkills: {
                 title: "Soft skills",

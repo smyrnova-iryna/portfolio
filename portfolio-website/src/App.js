@@ -92,16 +92,6 @@ function App() {
         x: 500,
       });
 
-      // gsap.from(".Skills-Heading", 
-      // { 
-      //   duration: 0.5,
-      //   x: 500,
-      //   delay: 1,
-      //   scrollTrigger: {
-      //     trigger: "#Skills"
-      //   }
-      // });
-
 
     }, comp); 
     
@@ -110,11 +100,6 @@ function App() {
   }, []);
 
 
-  
-
-  // Scroll animation test
-
-  // const circleRef = useRef();
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -365,40 +350,7 @@ function App() {
     
   }, []);
 
-  // Scroll animation test
-
-  // Scroll animation for About-Main-Page
-  // const aboutRef = useRef();
-
-  // useEffect(() => {
-  //   gsap.to(".About-Main-Page", {
-  //     x: 100,
-  //     duration: 2,
-  //     ease: "bounce",
-  //     delay: 1,
-  //     scrollTrigger: {
-  //       trigger: ".About-Main-Page"
-  //     }
-  //   });
-  // }, [circleRef]);
-   // Scroll animation for About-Main-Page
-
-// Scroll animation for Contact Me
-  // const contactMeRef = useRef();
-
-  // useEffect(() => {
-  //   gsap.from(".ContactMe-Heading", {
-  //     x: -100,
-  //     duration: 2,
-  //     ease: "bounce",
-  //     delay: 0.3,
-  //     scrollTrigger: {
-  //       trigger: ".ContactMe-Heading"
-  //     }
-  //   });
-  // }, [comp]);
-   // Scroll animation for Contact Me
-
+ 
   useLayoutEffect(() => {
     if (animateBurgerMenu === true) {
       let ctx = gsap.context(() => {
@@ -565,18 +517,6 @@ function App() {
               </div>
             </div>
           </div>
-          {/* <div className="Standart-List-Outer-Container">
-          <h3 className="Standart-Subheading Pet-Projects-Heading">{currentData.mainSection.portfolio.petProjects.heading}</h3>
-          <ul className="Standart-List">
-            {currentData.mainSection.portfolio.petProjects.projects.map((item) => 
-                      <li key={item.title} className="Standart-List-Container Pet-Project-Item">
-                          <p><span>{item.title}</span> - [ <span>{item.technologies}</span> ]</p>
-                          <a className="Pet-Project-Link" href={item.link} target='blank'>{item.link}</a>
-                      </li> 
-                      )}
-          </ul>
-
-          </div> */}
         </article>
         <article className="Standart-Section-Container">
           <div className="Experience-anchor" id="Experience"></div>
@@ -590,6 +530,11 @@ function App() {
             <h3 className="Standart-Subheading">{currentData.mainSection.experience.job[1].title}</h3>
             <p className="Standart-Description">{currentData.mainSection.experience.job[1].description}</p>
             <p>[ {currentData.mainSection.experience.job[1].date} ]</p>
+          </div>
+          <div className='Standart-Block Experience-Block'>
+            <h3 className="Standart-Subheading">{currentData.mainSection.experience.job[2].title}</h3>
+            <p className="Standart-Description">{currentData.mainSection.experience.job[2].description}</p>
+            <p>[ {currentData.mainSection.experience.job[2].date} ]</p>
           </div>
           <div className='Standart-Block Experience-Volunteering-Block' ref={comp}>
             <h3 className="Standart-Subheading">{currentData.mainSection.experience.volunteering.title}</h3>
